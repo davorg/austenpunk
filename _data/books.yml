@@ -1,4 +1,5 @@
 - slug: wuthering-git
+  live: true
   title: "Wuthering Git"
   subtitle: "Branching Strategies Driven Entirely by Revenge"
   author: "Emily Brontë"
@@ -21,6 +22,7 @@
     - "Chapter 4: Reader, I Squashed Him"
 
 - slug: pride-prejudice-and-pull-requests
+  live: true
   title: "Pride, Prejudice, and Pull Requests"
   subtitle: "Elizabeth Bennet Navigates Modern Code Review"
   author: "Jane Austen"
@@ -43,6 +45,7 @@
     - "Chapter 4: Reader, She Approved It"
 
 - slug: continuous-deployment-with-mr-rochester
+  live: true
   title: "Continuous Deployment with Mr Rochester"
   subtitle: "Secrets, Fire, and Production Infrastructure"
   author: "Charlotte Brontë"
@@ -64,6 +67,7 @@
     - "Chapter 4: Reader, I Deployed It"
 
 - slug: emma-woodhouse-refactors-your-monolith
+  live: true
   title: "Emma Woodhouse Refactors Your Monolith"
   subtitle: "Confident Architectural Changes for Other People's Systems"
   author: "Jane Austen"

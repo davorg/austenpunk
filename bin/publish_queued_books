@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+require "yaml"
+require "date"
+
+books_path = "_data/books.yml"
+queue_path = "_data/queued_books.yml"
+
+today = Date.today
+
+books = File.exist?(books_path) ? YAML.load_file(books_path) : []
+queue = File.exist?(queue_path) ? YAML.load_file(queue_path) : []
+
+ready, waiting = queue.partition do |book|
+  Date.parse(book.fetch("publish_on").to_s) <= today
+end
+
+ready.each do |book|
+  book["published"] = book.delete("publish_on")
+  book["live"] = true
+end
+
+books.concat(ready)
+
+File.write(books_path, books.to_yaml)
+File.write(queue_path, waiting.to_yaml)
+

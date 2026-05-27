@@ -3,7 +3,7 @@ layout: default
 title: Austenpunk
 ---
 
-{% assign books = site.data.books | sort: "published" | reverse %}
+{% assign books = site.data.books | where: "live", true | sort: "published" | reverse %}
 {% assign latest = books | first %}
 {% assign others = books | slice: 1, 3 %}
 

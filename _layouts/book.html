@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{% assign book = page.book %}
+{% assign cover = "/assets/images/covers/" | append: book.slug | append: ".png" %}
+
+<article class="book-page">
+  <p class="eyebrow">{{ book.topic }}</p>
+
+  <div class="book-detail">
+    <div>
+      <h1>{{ book.title }}</h1>
+      <p class="subtitle">{{ book.subtitle }}</p>
+      <p class="meta">
+        {{ book.author }} · {{ book.published | date: "%-d %B %Y" }}
+      </p>
+
+      {% if book.pullquote %}
+        <blockquote>
+          {{ book.pullquote }}
+        </blockquote>
+      {% endif %}
+
+      <p class="standfirst">{{ book.blurb }}</p>
+
+      {% if book.contents %}
+        <h2>Contents</h2>
+        <ol class="contents-list">
+          {% for chapter in book.contents %}
+            <li>{{ chapter }}</li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+
+      <p>
+        Published by Austenpunk, the distinguished imprint for engineers who
+        believe that every production incident would be improved by a stronger
+        sense of narrative irony.
+      </p>
+
+      <p>
+        This essential volume combines literary feeling, technical anxiety,
+        and just enough documentation to suggest that somebody once understood
+        the system.
+      </p>
+    </div>
+
+    <img
+      src="{{ cover }}"
+      alt="Cover of '{{ book.title }}'"
+      class="book-detail-cover"
+    >
+  </div>
+
+  <p class="back-link">
+    <a href="/">← Back to all books</a>
+  </p>
+</article>

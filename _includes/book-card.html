@@ -1,0 +1,20 @@
+{% assign book = include.book %}
+
+<article class="book-card">
+  <a href="/books/{{ book.slug }}/">
+    <img
+      src="/assets/images/covers/{{ book.slug }}.png"
+      alt="Cover of '{{ book.title }}'"
+    >
+  </a>
+
+  <div>
+    <p class="eyebrow">{{ book.topic }}</p>
+    <h2><a href="/books/{{ book.slug }}">{{ book.title }}</a></h2>
+    <p class="subtitle">{{ book.subtitle }}</p>
+    <p class="meta">
+      {{ book.author }} · {{ book.published | date: "%-d %B %Y" }}
+    </p>
+    <p>{{ book.teaser }}</p>
+  </div>
+</article>

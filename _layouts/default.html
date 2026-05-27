@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+{% if site.google_analytics -%}
+  <!-- Google tag (gtag.js) -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}">
+  </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% assign page_title = page.title | default: site.title -%}
+{% assign full_title = page_title | append: " · " | append: site.title -%}
+{% assign page_description = page.description | default: site.description -%}
+{% assign og_image = "/assets/images/og_image.png" | absolute_url -%}
+
+  <title>{{ full_title }}</title>
+
+  <meta name="description" content="{{ page_description }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ og_image }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ og_image }}">
+
+{% if page.book -%}
+  {% assign book = page.book -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": {{ book.title | jsonify }},
+    "description": {{ book.blurb | jsonify }},
+    "author": {
+      "@type": "Person",
+      "name": {{ book.author | jsonify }}
+    },
+    "datePublished": {{ book.published | jsonify }},
+    "image": {{ "/assets/images/og_image.png" | absolute_url | jsonify }},
+    "url": {{ page.url | absolute_url | jsonify }},
+    "publisher": {
+      "@type": "Organization",
+      "name": "Austenpunk Publishing"
+    }
+  }
+  </script>
+{% else -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ site.title | jsonify }},
+    "description": {{ site.description | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "image": {{ "/assets/images/og_image.png" | absolute_url | jsonify }}
+  }
+  </script>
+{% endif -%}
+
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ site.title }}"
+    href="/feed.xml"
+  >
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="site-title">Austenpunk</a>
+    <p>Classic literature for modern software teams</p>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="/feed.xml">RSS feed</a></p>
+    <p>Whilst Mr Rochester remains unavailable for consulting engagements,
+      <a href="https://davecross.co.uk/">Dave Cross</a> continues to offer
+      advice on continuous deployment, software architecture, and modern Perl
+      development.</p>
+  </footer>
+</body>
+</html>

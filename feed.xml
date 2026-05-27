@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}/</link>
+    <description>{{ site.description }}</description>
+    <language>en-GB</language>
+
+    {% assign books = site.data.books | sort: "published" | reverse %}
+
+    {% for book in books %}
+      <item>
+        <title>{{ book.title | xml_escape }}</title>
+
+        <link>
+          {{ site.url }}/books/{{ book.slug }}/
+        </link>
+
+        <guid>
+          {{ site.url }}/books/{{ book.slug }}/
+        </guid>
+
+        <pubDate>
+          {{ book.published | date_to_rfc822 }}
+        </pubDate>
+
+        <description>
+          {{ book.blurb | xml_escape }}
+        </description>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

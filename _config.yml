@@ -1,0 +1,9 @@
+title: Austenpunk
+description: Classic literature for modern software teams
+url: "https://austenpunk.dev"
+
+google_analytics: "G-GXBEPZKVEY"
+
+plugins:
+  - jekyll-sitemap
+

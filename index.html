@@ -1,0 +1,43 @@
+---
+layout: default
+title: Austenpunk
+---
+
+{% assign books = site.data.books | sort: "published" | reverse %}
+{% assign latest = books | first %}
+{% assign others = books | slice: 1, 3 %}
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Latest release</p>
+    <h1><a href="/books/{{ latest.slug }}">{{ latest.title }}</a></h1>
+    <p class="subtitle">{{ latest.subtitle }}</p>
+    <p class="meta">
+      {{ latest.author }} · {{ latest.topic }} · {{ latest.published | date: "%-d %B %Y" }}
+    </p>
+    <p>{{ latest.teaser }}</p>
+  </div>
+
+  <a href="/books/{{ latest.slug }}">
+    <img
+      src="/assets/images/covers/{{ latest.slug }}.png"
+      alt="Cover of {{ latest.title }}"
+      class="hero-cover"
+    >
+  </a>
+</section>
+
+<section class="book-grid">
+  {% for book in others %}
+    {% include book-card.html book=book %}
+  {% endfor %}
+</section>
+
+<section class="about">
+  <h2>Introducing Austenpunk</h2>
+  <p>
+    A distinguished new imprint bringing together the emotional intelligence
+    of nineteenth-century fiction and the operational anxieties of modern
+    software engineering.
+  </p>
+</section>

@@ -160,6 +160,38 @@ main {
   margin: 0.2em 0;
 }
 
+.books-index h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1.05;
+}
+
+.books-list {
+  margin: 2rem 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.books-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.books-list a {
+  color: var(--ink);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.books-list a:hover {
+  color: var(--accent);
+}
+
+.books-list span {
+  display: block;
+  color: var(--muted);
+}
+
 .standfirst {
   font-size: 1.25rem;
 }
@@ -206,6 +238,60 @@ blockquote {
 .contents-list li::marker {
   color: var(--accent);
   font-weight: bold;
+}
+
+.book-cover-link {
+  display: block;
+}
+
+.cover-lightbox {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  margin: 0;
+
+  inset: 0;
+  z-index: 1000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgb(44 33 24 / 92%);
+}
+
+.cover-lightbox:target {
+  display: flex;
+}
+
+.cover-lightbox img {
+  display: block;
+
+  max-width: min(90vw, 42rem);
+  max-height: 90vh;
+
+  width: auto;
+  height: auto;
+
+  box-shadow: 0 2rem 4rem rgb(0 0 0 / 45%);
+}
+
+.cover-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+
+  color: white;
+  font-size: 3rem;
+  line-height: 1;
+  text-decoration: none;
 }
 
 @media (max-width: 800px) {

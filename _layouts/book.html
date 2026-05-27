@@ -46,11 +46,19 @@ layout: default
       </p>
     </div>
 
-    <img
-      src="{{ cover }}"
-      alt="Cover of '{{ book.title }}'"
-      class="book-detail-cover"
-    >
+    <a href="#cover" class="book-cover-link">
+      <img
+        src="{{ cover }}"
+        alt="Cover of {{ book.title }}"
+        class="book-detail-cover"
+      >
+    </a>
+
+  </div>
+
+  <div id="cover" class="cover-lightbox">
+    <a href="#" class="cover-close" aria-label="Close image">×</a>
+    <img src="{{ cover }}" alt="Cover of {{ book.title }}">
   </div>
 
   <p class="back-link">

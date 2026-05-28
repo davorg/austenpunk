@@ -90,3 +90,26 @@
   - 'Chapter 2: Services I Have Matched Myself'
   - 'Chapter 3: The Misunderstanding at the API Boundary'
   - 'Chapter 4: It Was Badly Done, Indeed'
+- slug: sense-and-sensibility-testing
+  live: true
+  title: Sense and Sensibility Testing
+  subtitle: Unit Tests, Integration Tests, and Emotional Resilience
+  author: Jane Austen
+  topic: Testing
+  teaser: 'Elinor prefers disciplined unit tests. Marianne embraces sprawling end-to-end
+    integration suites with dangerous emotional intensity.
+
+    '
+  blurb: 'A practical introduction to testing strategies, balancing careful isolation
+    with realistic system-wide verification, and understanding that excessive feeling
+    is rarely an adequate substitute for coverage.
+
+    '
+  pullquote: "“Know your own happiness. You want nothing but patience — or a few more
+    integration tests.”\n"
+  contents:
+  - 'Chapter 1: Sensible Assertions'
+  - 'Chapter 2: Marianne Discovers End-to-End Testing'
+  - 'Chapter 3: Mock Objects and Emotional Turbulence'
+  - 'Chapter 4: A Most Unexpected Regression'
+  published: '2026-05-28'

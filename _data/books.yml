@@ -1,90 +1,92 @@
+---
 - slug: wuthering-git
   live: true
-  title: "Wuthering Git"
-  subtitle: "Branching Strategies Driven Entirely by Revenge"
-  author: "Emily Brontë"
+  title: Wuthering Git
+  subtitle: Branching Strategies Driven Entirely by Revenge
+  author: Emily Brontë
   published: 2026-05-24
-  topic: "Version Control"
-  teaser: >
-    Heathcliff's approach to source code management has terrified
-    development teams for generations.
-  blurb: >
-    A storm-lashed guide to Git workflows, force-pushes, unresolved merge
-    conflicts, and the terrible consequences of allowing emotional intensity
-    into your branching strategy.
-  pullquote: >
-    “The definitive guide to rebasing when everyone involved is making
-    decisions out of spite.”
-  contents:
-    - "Chapter 1: I Am Come Back to This Repository"
-    - "Chapter 2: The Force-Push on the Moor"
-    - "Chapter 3: Branches, Ghosts, and Unresolved Conflicts"
-    - "Chapter 4: Reader, I Squashed Him"
+  topic: Version Control
+  teaser: 'Heathcliff''s approach to source code management has terrified development
+    teams for generations.
 
+    '
+  blurb: 'A storm-lashed guide to Git workflows, force-pushes, unresolved merge conflicts,
+    and the terrible consequences of allowing emotional intensity into your branching
+    strategy.
+
+    '
+  pullquote: "“The definitive guide to rebasing when everyone involved is making decisions
+    out of spite.”\n"
+  contents:
+  - 'Chapter 1: I Am Come Back to This Repository'
+  - 'Chapter 2: The Force-Push on the Moor'
+  - 'Chapter 3: Branches, Ghosts, and Unresolved Conflicts'
+  - 'Chapter 4: Reader, I Squashed Him'
 - slug: pride-prejudice-and-pull-requests
   live: true
-  title: "Pride, Prejudice, and Pull Requests"
-  subtitle: "Elizabeth Bennet Navigates Modern Code Review"
-  author: "Jane Austen"
+  title: Pride, Prejudice, and Pull Requests
+  subtitle: Elizabeth Bennet Navigates Modern Code Review
+  author: Jane Austen
   published: 2026-05-25
-  topic: "Code Review"
-  teaser: >
-    Elizabeth Bennet thought first impressions were difficult enough.
-    Then she encountered a 4,000-line pull request with no tests.
-  blurb: >
-    A sharply observed guide to pull requests, reviewer etiquette,
-    constructive criticism, and the delicate art of discovering that your
-    first opinion of a codebase may not have been entirely accurate.
-  pullquote: >
-    “It is a truth universally acknowledged that a developer in possession
-    of a large diff must be in want of a reviewer.”
-  contents:
-    - "Chapter 1: First Impressions"
-    - "Chapter 2: A Most Disagreeable Diff"
-    - "Chapter 3: In Which Mr Darcy Requests Changes"
-    - "Chapter 4: Reader, She Approved It"
+  topic: Code Review
+  teaser: 'Elizabeth Bennet thought first impressions were difficult enough. Then
+    she encountered a 4,000-line pull request with no tests.
 
+    '
+  blurb: 'A sharply observed guide to pull requests, reviewer etiquette, constructive
+    criticism, and the delicate art of discovering that your first opinion of a codebase
+    may not have been entirely accurate.
+
+    '
+  pullquote: "“It is a truth universally acknowledged that a developer in possession
+    of a large diff must be in want of a reviewer.”\n"
+  contents:
+  - 'Chapter 1: First Impressions'
+  - 'Chapter 2: A Most Disagreeable Diff'
+  - 'Chapter 3: In Which Mr Darcy Requests Changes'
+  - 'Chapter 4: Reader, She Approved It'
 - slug: continuous-deployment-with-mr-rochester
   live: true
-  title: "Continuous Deployment with Mr Rochester"
-  subtitle: "Secrets, Fire, and Production Infrastructure"
-  author: "Charlotte Brontë"
+  title: Continuous Deployment with Mr Rochester
+  subtitle: Secrets, Fire, and Production Infrastructure
+  author: Charlotte Brontë
   published: 2026-05-26
-  topic: "DevOps"
-  teaser: >
-    Thornfield Hall seemed the ideal production environment until
-    strange noises emerged from the monitoring systems.
-  blurb: >
-    A gothic introduction to continuous deployment, incident response,
-    rollback strategies, and the importance of investigating any mysterious
-    process that appears to be running in the attic.
-  pullquote: >
-    “Reader, I deployed it.”
-  contents:
-    - "Chapter 1: The Pipeline at Thornfield"
-    - "Chapter 2: A Suspicious Noise in Production"
-    - "Chapter 3: Backups, Rollbacks, and Other Hidden Wives"
-    - "Chapter 4: Reader, I Deployed It"
+  topic: DevOps
+  teaser: 'Thornfield Hall seemed the ideal production environment until strange noises
+    emerged from the monitoring systems.
 
+    '
+  blurb: 'A gothic introduction to continuous deployment, incident response, rollback
+    strategies, and the importance of investigating any mysterious process that appears
+    to be running in the attic.
+
+    '
+  pullquote: "“Reader, I deployed it.”\n"
+  contents:
+  - 'Chapter 1: The Pipeline at Thornfield'
+  - 'Chapter 2: A Suspicious Noise in Production'
+  - 'Chapter 3: Backups, Rollbacks, and Other Hidden Wives'
+  - 'Chapter 4: Reader, I Deployed It'
 - slug: emma-woodhouse-refactors-your-monolith
   live: true
-  title: "Emma Woodhouse Refactors Your Monolith"
-  subtitle: "Confident Architectural Changes for Other People's Systems"
-  author: "Jane Austen"
+  title: Emma Woodhouse Refactors Your Monolith
+  subtitle: Confident Architectural Changes for Other People's Systems
+  author: Jane Austen
   published: 2026-05-27
-  topic: "Software Architecture"
-  teaser: >
-    Emma Woodhouse has never written a line of production code, but that
-    will not prevent her from reorganising your entire application.
-  blurb: >
-    A brilliantly self-assured guide to refactoring monoliths, extracting
-    services, reorganising dependencies, and making confident architectural
-    decisions before consulting the people who understand the system.
-  pullquote: >
-    “There is nothing like staying at home for real comfort, unless one
-    can also restructure the service boundaries.”
+  topic: Software Architecture
+  teaser: 'Emma Woodhouse has never written a line of production code, but that will
+    not prevent her from reorganising your entire application.
+
+    '
+  blurb: 'A brilliantly self-assured guide to refactoring monoliths, extracting services,
+    reorganising dependencies, and making confident architectural decisions before
+    consulting the people who understand the system.
+
+    '
+  pullquote: "“There is nothing like staying at home for real comfort, unless one
+    can also restructure the service boundaries.”\n"
   contents:
-    - "Chapter 1: A Monolith of Some Consequence"
-    - "Chapter 2: Services I Have Matched Myself"
-    - "Chapter 3: The Misunderstanding at the API Boundary"
-    - "Chapter 4: It Was Badly Done, Indeed"
+  - 'Chapter 1: A Monolith of Some Consequence'
+  - 'Chapter 2: Services I Have Matched Myself'
+  - 'Chapter 3: The Misunderstanding at the API Boundary'
+  - 'Chapter 4: It Was Badly Done, Indeed'

@@ -8,15 +8,21 @@ queue_path = "_data/queued_books.yml"
 
 today = Date.today
 
-books = File.exist?(books_path) ? YAML.load_file(books_path) : []
-queue = File.exist?(queue_path) ? YAML.load_file(queue_path) : []
+books = File.exist?(books_path) ? YAML.safe_load_file(books_path, permitted_classes: [Date]) : []
+queue = File.exist?(queue_path) ? YAML.safe_load_file(queue_path, permitted_classes: [Date]) : []
 
 ready, waiting = queue.partition do |book|
-  Date.parse(book.fetch("publish_on").to_s) <= today
+  publish_on = book.fetch("publish_on")
+  publish_on = Date.parse(publish_on.to_s) unless publish_on.is_a?(Date)
+
+  publish_on <= today
 end
 
 ready.each do |book|
-  book["published"] = book.delete("publish_on")
+  publish_on = book.delete("publish_on")
+  publish_on = publish_on.iso8601 if publish_on.is_a?(Date)
+
+  book["published"] = publish_on
   book["live"] = true
 end
 

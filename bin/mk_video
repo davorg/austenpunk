@@ -1,0 +1,217 @@
+#!/usr/bin/env perl
+
+use v5.40;
+use utf8;
+use JSON::PP qw(decode_json encode_json);
+use YAML::XS qw(LoadFile);
+use HTTP::Tiny;
+use Path::Tiny;
+use DateTime;
+
+my $slug = shift or die "Usage: $0 <book-slug>\n";
+
+my $openai_key = $ENV{OPENAI_API_KEY}
+  or die "Set OPENAI_API_KEY\n";
+
+my $eleven_key = $ENV{ELEVENLABS_API_KEY}
+  or die "Set ELEVENLABS_API_KEY\n";
+
+my $voice_id = $ENV{ELEVENLABS_VOICE_ID}
+  or die "Set ELEVENLABS_VOICE_ID for now\n";
+
+my @books;
+push @books, @{ LoadFile("_data/books.yml") || [] };
+push @books, @{ LoadFile("_data/queued_books.yml") || [] };
+
+my ($book) = grep { $_->{slug} eq $slug } @books;
+die "No book found for slug [$slug]\n" unless $book;
+
+path("tmp")->mkpath;
+
+my $script;
+
+if (-f "tmp/$slug.txt") {
+  $script = path("tmp/$slug.txt")->slurp_utf8;
+} else {
+  $script = generate_script($book);
+  path("tmp/$slug.txt")->spew_utf8($script);
+
+  say "Wrote tmp/$slug.txt";
+}
+
+unless (-f "tmp/$slug.mp3") {
+  generate_audio(
+    text     => $script,
+    voice_id => $voice_id,
+    out      => "tmp/$slug.mp3",
+  );
+
+  say "Wrote tmp/$slug.mp3";
+}
+
+make_video($slug);
+
+sub generate_script ($book) {
+  my $prompt = <<"PROMPT";
+You are writing a short TikTok voiceover for Austenpunk Publishing.
+
+The video shows a single fake vintage technical book cover with a slow pan and zoom.
+
+Write a 25-30 second voiceover, around 75 words.
+
+Tone:
+- deadpan
+- mock-serious
+- BBC literary documentary
+- funny, but never wacky
+- no stage directions
+- no markdown
+- no hashtags
+
+Book data:
+Title: $book->{title}
+Subtitle: $book->{subtitle}
+Author: $book->{author}
+Topic: $book->{topic}
+Teaser: $book->{teaser}
+Blurb: $book->{blurb}
+Pullquote: $book->{pullquote}
+
+End with a short line mentioning Austenpunk Publishing.
+PROMPT
+
+  my $http = HTTP::Tiny->new;
+
+  my $res = $http->post(
+    "https://api.openai.com/v1/responses",
+    {
+      headers => {
+        Authorization  => "Bearer $openai_key",
+        "Content-Type" => "application/json",
+      },
+      content => encode_json({
+        model => "gpt-5.5",
+        input => $prompt,
+      }),
+    },
+  );
+
+  die "OpenAI error: $res->{status} $res->{reason}\n$res->{content}\n"
+    unless $res->{success};
+
+  my $data = decode_json($res->{content});
+
+  for my $output ($data->{output}->@*) {
+    next unless $output->{type} eq 'message';
+
+    for my $content ($output->{content}->@*) {
+      next unless $content->{type} eq 'output_text';
+
+      return $content->{text};
+    }
+  }
+
+  die "No output_text found in OpenAI response\n";
+}
+
+sub generate_audio (%arg) {
+  my $http = HTTP::Tiny->new;
+
+  my $res = $http->post(
+    "https://api.elevenlabs.io/v1/text-to-speech/$arg{voice_id}",
+    {
+      headers => {
+        "xi-api-key"   => $eleven_key,
+        "Content-Type" => "application/json",
+        "Accept"       => "audio/mpeg",
+      },
+      content => encode_json({
+        text     => $arg{text},
+        model_id => "eleven_multilingual_v2",
+        voice_settings => {
+          stability        => 0.55,
+          similarity_boost => 0.75,
+        },
+      }),
+    },
+  );
+
+  die "ElevenLabs error: $res->{status} $res->{reason}\n$res->{content}\n"
+    unless $res->{success};
+
+  path($arg{out})->spew_raw($res->{content});
+}
+
+sub make_video ($slug) {
+  my $cover = "assets/images/covers/$slug.png";
+  my $audio = "tmp/$slug.mp3";
+  my $video = "tmp/$slug.mp4";
+
+  die "Missing cover: $cover\n" unless -e $cover;
+  die "Missing audio: $audio\n" unless -e $audio;
+
+  my $audio_duration = `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$audio"`;
+  chomp $audio_duration;
+
+  die "Could not determine audio duration\n" unless $audio_duration =~ /\A\d+(?:\.\d+)?\z/;
+
+  my $lead_in  = 2;
+  my $duration = $audio_duration + $lead_in;
+  my $fps      = 30;
+  my $frames   = int($duration * $fps);
+
+  my $zoom_expr = "1.08-0.08*on/$frames";
+
+my $filter = qq{
+[0:v]
+scale=1080:1920:force_original_aspect_ratio=increase,
+crop=1080:1920,
+boxblur=24:1,
+eq=brightness=-0.08:saturation=0.65
+[bg];
+
+[0:v]
+scale=900:1350:force_original_aspect_ratio=decrease
+[cover];
+
+[bg][cover]
+overlay=(W-w)/2:(H-h)/2,
+fps=$fps,
+format=yuv420p
+[v]
+};
+
+system(
+  "ffmpeg",
+  "-y",
+
+  "-loop", "1",
+  "-framerate", "$fps",
+  "-i", $cover,
+
+  "-i", $audio,
+
+  "-filter_complex", $filter,
+
+  "-map", "[v]",
+  "-map", "1:a",
+
+  "-af", "adelay=2000|2000",
+
+  "-t", "$duration",
+
+  "-c:v", "libx264",
+  "-preset", "slow",
+  "-crf", "18",
+
+  "-c:a", "aac",
+  "-b:a", "192k",
+
+  "-pix_fmt", "yuv420p",
+  "-movflags", "+faststart",
+
+  $video,
+) == 0 or die "ffmpeg failed\n";
+
+  say "Wrote $video";
+}

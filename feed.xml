@@ -5,17 +5,21 @@ permalink: /feed.xml
 
 <?xml version="1.0" encoding="utf-8"?>
 
-<rss version="2.0">
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <atom:link href="{{ '/rss.xml' | absolute_url }}" rel="self" type="application/rss+xml" />
     <title>{{ site.title }}</title>
     <link>{{ site.url }}/</link>
+
     <description>{{ site.description }}</description>
     <language>en-GB</language>
 
-    {% assign books = site.data.books | sort: "published" | reverse %}
+    {% assign books = site.data.books | where: "live", true | sort: "published" | reverse -%}
 
-    {% for book in books %}
+    {% for book in books -%}
       <item>
+      {% assign cover = "/assets/images/covers/" | append: book.slug | append: ".png" | absolute_url -%}
+
         <title>{{ book.title | xml_escape }}</title>
 
         <link>
@@ -30,10 +34,24 @@ permalink: /feed.xml
           {{ book.published | date_to_rfc822 }}
         </pubDate>
 
-        <description>
-          {{ book.blurb | xml_escape }}
-        </description>
+        <media:content
+          url="{{ cover }}"
+          medium="image"
+          type="image/png"
+        />
+
+        <description><![CDATA[
+          <p>
+            <img
+              src="{{ cover }}"
+              alt="{{ book.title | escape }}"
+              style="max-width:100%;height:auto;"
+            >
+          </p>
+
+          <p>{{ book.blurb }}</p>
+        ]]></description>
       </item>
-    {% endfor %}
+    {% endfor -%}
   </channel>
 </rss>

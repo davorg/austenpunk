@@ -1,27 +1,4 @@
 ---
-- slug: observability-heights
-  live: false
-  publish_on: 2026-05-29
-  title: Observability Heights
-  subtitle: Logging, Metrics, and Unhealthy Emotional Dependencies
-  author: Emily Brontë
-  topic: Observability
-  teaser: 'Heathcliff discovers metrics, distributed tracing, and the destructive
-    consequences of becoming emotionally attached to production systems.
-
-    '
-  blurb: 'A bleak and windswept exploration of logging, metrics, tracing, and the
-    unhealthy psychological patterns that emerge when engineers begin treating operational
-    dashboards as extensions of their own souls.
-
-    '
-  pullquote: "“Whatever our observability stacks are made of, his and mine are the
-    same.”\n"
-  contents:
-  - 'Chapter 1: The Logs Upon the Moor'
-  - 'Chapter 2: Catherine in the Monitoring Dashboard'
-  - 'Chapter 3: Traces of Long-Abandoned Requests'
-  - 'Chapter 4: Reader, the Latency Was Inside Us All Along'
 - slug: persuasion-driven-development
   live: false
   publish_on: 2026-05-30

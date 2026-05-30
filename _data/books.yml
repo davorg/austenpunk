@@ -136,3 +136,26 @@
   - 'Chapter 3: Traces of Long-Abandoned Requests'
   - 'Chapter 4: Reader, the Latency Was Inside Us All Along'
   published: '2026-05-29'
+- slug: persuasion-driven-development
+  live: true
+  title: Persuasion-Driven Development
+  subtitle: Quietly Introducing Sensible Engineering Practices
+  author: Jane Austen
+  topic: Engineering Culture
+  teaser: 'Anne Elliot gently recommends sensible engineering improvements while everybody
+    else pursues far louder and worse ideas.
+
+    '
+  blurb: 'A thoughtful guide to introducing engineering standards, improving team
+    culture, and quietly steering organisations toward competence without needing
+    to become the loudest person in the architecture meeting.
+
+    '
+  pullquote: "“She had been forced into prudence in her youth; she learned observability
+    in her later years.”\n"
+  contents:
+  - 'Chapter 1: The Unheeded Recommendation'
+  - 'Chapter 2: Captain Wentworth Reviews the RFC'
+  - 'Chapter 3: Gradual Improvement at Kellynch Hall'
+  - 'Chapter 4: A Sensible Migration Strategy'
+  published: '2026-05-30'

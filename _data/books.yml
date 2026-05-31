@@ -159,3 +159,25 @@
   - 'Chapter 3: Gradual Improvement at Kellynch Hall'
   - 'Chapter 4: A Sensible Migration Strategy'
   published: '2026-05-30'
+- slug: jane-eyre-and-the-microservices-of-thornfield-hall
+  live: true
+  title: Jane Eyre and the Microservices of Thornfield Hall
+  subtitle: Distributed Systems with Hidden Complexity
+  author: Charlotte Brontë
+  topic: Microservices
+  teaser: 'Thornfield Hall appeared elegant from the outside, but inside lay a deeply
+    alarming distributed architecture.
+
+    '
+  blurb: 'An unsettling examination of microservices, hidden dependencies, undocumented
+    interfaces, and the consequences of discovering that critical business logic has
+    been locked in the attic for years.
+
+    '
+  pullquote: "“Do you think I am an automaton? — a machine without dependencies?”\n"
+  contents:
+  - 'Chapter 1: Services in the Attic'
+  - 'Chapter 2: The Secret API Boundary'
+  - 'Chapter 3: Reader, the Queue Had Failed'
+  - 'Chapter 4: A Distributed Architecture Most Inconvenient'
+  published: '2026-05-31'

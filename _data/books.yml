@@ -181,3 +181,26 @@
   - 'Chapter 3: Reader, the Queue Had Failed'
   - 'Chapter 4: A Distributed Architecture Most Inconvenient'
   published: '2026-05-31'
+- slug: mansfield-park-and-the-ethics-of-ai
+  live: true
+  title: Mansfield Park and the Ethics of AI
+  subtitle: Just Because You Can Automate Something...
+  author: Jane Austen
+  topic: AI Ethics
+  teaser: 'Fanny Price asks whether automating every human decision is necessarily
+    the triumph of progress that everyone else assumes.
+
+    '
+  blurb: 'A morally serious examination of artificial intelligence, automation, responsibility,
+    and the uncomfortable possibility that technical capability may not always align
+    with ethical wisdom.
+
+    '
+  pullquote: "“Selfishness must always be forgiven, you know, because there is no
+    hope of a cure — especially in venture capital.”\n"
+  contents:
+  - 'Chapter 1: The Automation Proposal'
+  - 'Chapter 2: Sir Thomas Invests in Machine Learning'
+  - 'Chapter 3: Fanny Raises Mild but Serious Concerns'
+  - 'Chapter 4: The Catastrophic Demo'
+  published: '2026-06-01'

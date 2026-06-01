@@ -22,8 +22,10 @@ jobs:
       - run: ruby bin/publish_queued_books
 
       - name: Commit changes
+        id: commit
         run: |
           if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No books to publish"
             exit 0
           fi
@@ -33,4 +35,11 @@ jobs:
           git add _data/books.yml _data/queued_books.yml
           git commit -m "Publish queued Austenpunk books"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Rebuild site
+        if: steps.commit.outputs.changed == 'true'
+        run: gh workflow run pages.yml
+        env:
+          GH_TOKEN: ${{ github.token }}
 

@@ -1,27 +1,4 @@
 ---
-- slug: northanger-ci-cd
-  live: false
-  publish_on: 2026-06-02
-  title: Northanger CI/CD
-  subtitle: The Jenkins Server Is Surely Haunted
-  author: Jane Austen
-  topic: CI/CD
-  teaser: 'Catherine Morland becomes convinced that the build pipeline conceals dark
-    and supernatural secrets.
-
-    '
-  blurb: 'A gothic comedy about CI/CD pipelines, inexplicable build failures, strange
-    noises from Jenkins at midnight, and the dangers of allowing imagination to roam
-    freely through deployment infrastructure.
-
-    '
-  pullquote: "“No one who had ever seen Jenkins in its infancy would have supposed
-    it born to be an automated pipeline.”\n"
-  contents:
-  - 'Chapter 1: The Abbey Build Server'
-  - 'Chapter 2: A Most Suspicious Deployment Failure'
-  - 'Chapter 3: The YAML of Udolpho'
-  - 'Chapter 4: Reader, It Was a Missing Semicolon'
 - slug: the-tenant-of-wildfell-devops
   live: false
   publish_on: 2026-06-03

@@ -1,27 +1,4 @@
 ---
-- slug: the-tenant-of-wildfell-devops
-  live: false
-  publish_on: 2026-06-03
-  title: The Tenant of Wildfell DevOps
-  subtitle: Escaping Toxic Engineering Culture
-  author: Anne Brontë
-  topic: DevOps
-  teaser: 'Helen Graham leaves a catastrophically unhealthy engineering culture and
-    rebuilds her infrastructure somewhere quieter.
-
-    '
-  blurb: 'A remarkably modern account of psychological safety, sustainable operations,
-    and the difficult process of escaping organisations where every deployment is
-    treated as an opportunity for public humiliation.
-
-    '
-  pullquote: "“I am satisfied that if a book is a good one, it is so whatever the
-    gender of the deployment engineer.”\n"
-  contents:
-  - 'Chapter 1: The Incident Review'
-  - 'Chapter 2: Escaping the Monolithic Team Structure'
-  - 'Chapter 3: Rebuilding Trust and Infrastructure'
-  - 'Chapter 4: A Healthier Production Environment'
 - slug: agile-and-sensibility
   live: false
   publish_on: 2026-06-04

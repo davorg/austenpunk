@@ -250,3 +250,26 @@
   - 'Chapter 3: Rebuilding Trust and Infrastructure'
   - 'Chapter 4: A Healthier Production Environment'
   published: '2026-06-03'
+- slug: agile-and-sensibility
+  live: true
+  title: Agile and Sensibility
+  subtitle: Scrum, Sprint Planning, and Dangerous Emotional Intensity
+  author: Jane Austen
+  topic: Agile
+  teaser: 'Marianne embraces Scrum with alarming emotional commitment while Elinor
+    quietly updates the documentation.
+
+    '
+  blurb: 'An emotionally charged introduction to Agile methodologies, sprint planning,
+    retrospectives, and the difficult challenge of maintaining professional composure
+    during estimation sessions.
+
+    '
+  pullquote: "“Elinor agreed to it all, for she did not think he deserved the compliment
+    of rational opposition.”\n"
+  contents:
+  - 'Chapter 1: The Sprint Planning Meeting'
+  - 'Chapter 2: Marianne Discovers Velocity'
+  - 'Chapter 3: Daily Stand-Ups and Emotional Collapse'
+  - 'Chapter 4: Elinor Writes the Documentation'
+  published: '2026-06-04'

@@ -1,27 +1,4 @@
 ---
-- slug: charlotte-brontes-guide-to-remote-working-on-the-yorkshire-moors
-  live: false
-  publish_on: 2026-06-05
-  title: Charlotte Brontë’s Guide to Remote Working on the Yorkshire Moors
-  subtitle: Distributed Teams in Bleak and Windswept Environments
-  author: Charlotte Brontë
-  topic: Remote Working
-  teaser: 'A practical guide to asynchronous collaboration in isolated and emotionally
-    intense environments.
-
-    '
-  blurb: 'Covering remote communication, work-life balance, and maintaining team cohesion
-    despite bleak weather and overwhelming existential longing, this essential handbook
-    remains surprisingly relevant.
-
-    '
-  pullquote: "“I avoid great parties and stay at home — precisely because that enables
-    me to get more done on Slack.”\n"
-  contents:
-  - 'Chapter 1: The Solitary Workspace'
-  - 'Chapter 2: Windswept Zoom Calls'
-  - 'Chapter 3: The Etiquette of Muted Microphones'
-  - 'Chapter 4: Reader, I Worked Remotely'
 - slug: mr-darcy-explains-impostor-syndrome
   live: false
   publish_on: 2026-06-06

@@ -1,27 +1,4 @@
 ---
-- slug: mr-darcy-explains-impostor-syndrome
-  live: false
-  publish_on: 2026-06-06
-  title: Mr Darcy Explains Impostor Syndrome
-  subtitle: My Good Opinion, Once Lost...
-  author: Jane Austen
-  topic: Career Development
-  teaser: 'Fitzwilliam Darcy attempts to understand why software engineers with obvious
-    competence remain convinced they are frauds.
-
-    '
-  blurb: 'A quietly sympathetic exploration of confidence, self-doubt, career progression,
-    and the tendency of highly capable developers to assume everyone else understands
-    Kubernetes better than they do.
-
-    '
-  pullquote: "“My good opinion, once lost, is lost forever — particularly after a
-    failed production deployment.”\n"
-  contents:
-  - 'Chapter 1: The Accomplished Engineer'
-  - 'Chapter 2: False Confidence at Netherfield'
-  - 'Chapter 3: Elizabeth Reviews Her Performance'
-  - 'Chapter 4: Reader, You Probably Are Qualified'
 - slug: the-importance-of-being-ernest-but-also-idempotent
   live: false
   publish_on: 2026-06-07

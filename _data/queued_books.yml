@@ -1,27 +1,4 @@
 ---
-- slug: the-importance-of-being-ernest-but-also-idempotent
-  live: false
-  publish_on: 2026-06-07
-  title: The Importance of Being Ernest But Also Idempotent
-  subtitle: Reliable Systems for Serious People
-  author: Oscar Wilde
-  topic: Distributed Systems
-  teaser: 'In matters of distributed computing, sincerity is rarely sufficient; one
-    must also guarantee repeatable outcomes.
-
-    '
-  blurb: 'A dazzling comedy of manners concerning idempotency, retries, message delivery
-    guarantees, and the disastrous social consequences of executing the same financial
-    transaction twice.
-
-    '
-  pullquote: "“To lose one packet may be regarded as a misfortune; to lose both looks
-    like carelessness.”\n"
-  contents:
-  - 'Chapter 1: The Duplicate Request'
-  - 'Chapter 2: A Trivial Matter of Consistency'
-  - 'Chapter 3: Cecily Retries the Transaction'
-  - 'Chapter 4: The Importance of Stable Endpoints'
 - slug: villette-and-variable-scope
   live: false
   publish_on: 2026-06-08

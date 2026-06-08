@@ -1,26 +1,4 @@
 ---
-- slug: villette-and-variable-scope
-  live: false
-  publish_on: 2026-06-08
-  title: Villette and Variable Scope
-  subtitle: Isolated State Leaking Across Modules
-  author: Charlotte Brontë
-  topic: Programming Languages
-  teaser: 'Lucy Snowe investigates mysterious state leakage across isolated and emotionally
-    repressed code modules.
-
-    '
-  blurb: 'A psychologically complex examination of variable scope, hidden state, namespace
-    collisions, and the emotional consequences of badly managed globals in long-running
-    applications.
-
-    '
-  pullquote: "“I was both constrained and silent — much like a lexical variable.”\n"
-  contents:
-  - 'Chapter 1: The Hidden Namespace'
-  - 'Chapter 2: Unexpected State Mutation'
-  - 'Chapter 3: Lucy Encounters a Global Variable'
-  - 'Chapter 4: Encapsulation and Despair'
 - slug: catherine-earnshaws-guide-to-conflict-resolution
   live: false
   publish_on: 2026-06-09

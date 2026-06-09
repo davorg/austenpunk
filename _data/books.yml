@@ -364,3 +364,25 @@
   - 'Chapter 3: Lucy Encounters a Global Variable'
   - 'Chapter 4: Encapsulation and Despair'
   published: '2026-06-08'
+- slug: catherine-earnshaws-guide-to-conflict-resolution
+  live: true
+  title: Catherine Earnshaw’s Guide to Conflict Resolution
+  subtitle: A Very Short Book
+  author: Emily Brontë
+  topic: Management
+  teaser: 'Catherine Earnshaw presents a concise and entirely ineffective approach
+    to interpersonal management.
+
+    '
+  blurb: 'A catastrophically brief examination of conflict resolution strategies,
+    demonstrating mainly what happens when strong emotions are allowed to dictate
+    both leadership and version control decisions.
+
+    '
+  pullquote: "“Whatever our souls are made of, HR strongly recommends mediation.”\n"
+  contents:
+  - 'Chapter 1: Shouting on the Moor'
+  - 'Chapter 2: Escalation Procedures'
+  - 'Chapter 3: Absolutely No Compromise'
+  - 'Chapter 4: The Entire Team Resigns'
+  published: '2026-06-09'

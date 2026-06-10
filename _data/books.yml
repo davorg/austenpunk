@@ -386,3 +386,26 @@
   - 'Chapter 3: Absolutely No Compromise'
   - 'Chapter 4: The Entire Team Resigns'
   published: '2026-06-09'
+- slug: jane-austens-domain-driven-design
+  live: true
+  title: Jane Austen’s Domain-Driven Design
+  subtitle: Bounded Contexts in Hertfordshire
+  author: Jane Austen
+  topic: Software Architecture
+  teaser: 'The social geography of Hertfordshire proves unexpectedly useful for understanding
+    bounded contexts and aggregate roots.
+
+    '
+  blurb: 'A refined introduction to domain-driven design, demonstrating that the complexities
+    of inheritance, social obligation, and marriage markets map remarkably well onto
+    modern software architecture.
+
+    '
+  pullquote: "“It is particularly incumbent on those who never change their opinion
+    to be secure of judging properly at first.”\n"
+  contents:
+  - 'Chapter 1: The Domain of Longbourn'
+  - 'Chapter 2: Bounded Contexts at Pemberley'
+  - 'Chapter 3: The Ubiquitous Language of Courtship'
+  - 'Chapter 4: Aggregates and Entailments'
+  published: '2026-06-10'

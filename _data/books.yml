@@ -409,3 +409,24 @@
   - 'Chapter 3: The Ubiquitous Language of Courtship'
   - 'Chapter 4: Aggregates and Entailments'
   published: '2026-06-10'
+- slug: rebecca-and-event-sourcing
+  live: true
+  title: Rebecca and Event Sourcing
+  subtitle: The Previous State Is Always Haunting the Current System
+  author: Daphne du Maurier
+  topic: Event Sourcing
+  teaser: 'Manderley burns, but the historical event log remains stubbornly intact.
+
+    '
+  blurb: 'A haunting meditation on event sourcing, immutable history, and the unsettling
+    discovery that previous application states continue exerting influence long after
+    everyone wishes they had disappeared.
+
+    '
+  pullquote: "“Last night I dreamt I went to the audit log again.”\n"
+  contents:
+  - 'Chapter 1: The Immutable Event Store'
+  - 'Chapter 2: Rebecca Commits to Main'
+  - 'Chapter 3: Replaying Historical Catastrophes'
+  - 'Chapter 4: Manderley and the Append-Only Architecture'
+  published: '2026-06-11'

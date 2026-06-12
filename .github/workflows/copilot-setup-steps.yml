@@ -28,8 +28,5 @@ jobs:
               with:
                   perl-version: "5.40"
 
-            - name: Ensure cpanm is installed
-              run: cpanm --notest App::cpanminus
-
             - name: Install Perl dependencies
               run: cpanm --notest --installdeps .

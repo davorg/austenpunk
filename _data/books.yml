@@ -430,3 +430,26 @@
   - 'Chapter 3: Replaying Historical Catastrophes'
   - 'Chapter 4: Manderley and the Append-Only Architecture'
   published: '2026-06-11'
+- slug: miss-havishams-legacy-code
+  live: true
+  title: Miss Havisham’s Legacy Code
+  subtitle: Nobody Dares Touch the Build System
+  author: Charles Dickens
+  topic: Legacy Systems
+  teaser: 'The build pipeline has remained untouched for decades, and everyone is
+    far too frightened to investigate it properly.
+
+    '
+  blurb: 'A gloomy but practical guide to maintaining legacy systems, surviving inherited
+    technical debt, and understanding why some applications seem emotionally incapable
+    of modernisation.
+
+    '
+  pullquote: "“I have seen so much done, that it would be strange if I could be surprised
+    by a Perl CGI application.”\n"
+  contents:
+  - 'Chapter 1: Great Expectations of Refactoring'
+  - 'Chapter 2: The Wedding Cake Deployment Strategy'
+  - 'Chapter 3: Estella Reviews the Build Scripts'
+  - 'Chapter 4: Pip Encounters Technical Debt'
+  published: '2026-06-12'

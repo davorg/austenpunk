@@ -1,33 +1,39 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env perl
 
-require "yaml"
-require "date"
+use v5.40;
+use YAML::XS  qw(LoadFile DumpFile);
+use JSON::PP  qw();
+use DateTime;
 
-books_path = "_data/books.yml"
-queue_path = "_data/queued_books.yml"
+local $YAML::XS::Boolean = 'JSON::PP';
 
-today = Date.today
+my $books_path = '_data/books.yml';
+my $queue_path = '_data/queued_books.yml';
 
-books = File.exist?(books_path) ? YAML.safe_load_file(books_path, permitted_classes: [Date]) : []
-queue = File.exist?(queue_path) ? YAML.safe_load_file(queue_path, permitted_classes: [Date]) : []
+my $today = DateTime->today->ymd;
 
-ready, waiting = queue.partition do |book|
-  publish_on = book.fetch("publish_on")
-  publish_on = Date.parse(publish_on.to_s) unless publish_on.is_a?(Date)
+my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
+my $queue = -f $queue_path ? ( LoadFile($queue_path) // [] ) : [];
 
-  publish_on <= today
-end
+my ( @ready, @waiting );
+for my $book (@$queue) {
+    my $publish_on = $book->{publish_on};
+    if ( "$publish_on" le $today ) {
+        push @ready, $book;
+    }
+    else {
+        push @waiting, $book;
+    }
+}
 
-ready.each do |book|
-  publish_on = book.delete("publish_on")
-  publish_on = publish_on.iso8601 if publish_on.is_a?(Date)
+for my $book (@ready) {
+    my $publish_on = delete $book->{publish_on};
+    $book->{published} = "$publish_on";
+    $book->{live}      = JSON::PP::true;
+}
 
-  book["published"] = publish_on
-  book["live"] = true
-end
+push @$books, @ready;
 
-books.concat(ready)
-
-File.write(books_path, books.to_yaml)
-File.write(queue_path, waiting.to_yaml)
+DumpFile( $books_path, $books );
+DumpFile( $queue_path, \@waiting );
 

@@ -1,1 +1,271 @@
---- []
+---
+- slug: tess-of-the-durbervilles-and-database-normalisation
+  live: false
+  publish_on: 2026-06-13
+  title: "Tess of the d’Urbervilles and Database Normalisation"
+  subtitle: "Reducing Redundancy in a Cruel and Unforgiving Schema"
+  author: "Thomas Hardy"
+  topic: "Database Design"
+  teaser: >
+    Tess discovers that duplicated data, inherited assumptions, and badly
+    designed relationships can ruin absolutely everything.
+  blurb: >
+    A tragic introduction to database normalisation, referential integrity,
+    and the devastating consequences of allowing historical errors to
+    propagate unchecked through successive generations of schema design.
+  pullquote: >
+    “The database was pure, but the data model had other opinions.”
+  contents:
+    - "Chapter 1: The First Normal Form of Innocence"
+    - "Chapter 2: Angel Clare Denormalises for Performance"
+    - "Chapter 3: Referential Integrity at Flintcomb-Ash"
+    - "Chapter 4: A Cruel Constraint Is Enforced"
+
+- slug: far-from-the-madding-cloud
+  live: false
+  publish_on: 2026-06-14
+  title: "Far from the Madding Cloud"
+  subtitle: "Rural Infrastructure in an Age of Elastic Compute"
+  author: "Thomas Hardy"
+  topic: "Cloud Architecture"
+  teaser: >
+    Bathsheba Everdene attempts to run a scalable platform from a farm,
+    despite intermittent connectivity and several unreliable men.
+  blurb: >
+    A pastoral guide to cloud architecture, resilience, autoscaling, and
+    the difficulty of maintaining infrastructure when everyone involved is
+    distracted by weather, sheep, and emotional misconfiguration.
+  pullquote: >
+    “It is difficult for a woman to define her feelings in language chiefly
+    made by men, or in YAML chiefly maintained by Gabriel Oak.”
+  contents:
+    - "Chapter 1: Elastic Compute at Weatherbury"
+    - "Chapter 2: Gabriel Oak Configures the Load Balancer"
+    - "Chapter 3: Troy Introduces an Unreviewed Change"
+    - "Chapter 4: Scaling Horizontally Across the Downs"
+
+- slug: middlemarch-and-the-monorepo
+  live: false
+  publish_on: 2026-06-15
+  title: "Middlemarch and the Monorepo"
+  subtitle: "A Study of Provincial Life and Shared Code Ownership"
+  author: "George Eliot"
+  topic: "Repository Strategy"
+  teaser: >
+    Dorothea Brooke believes a single unified repository may improve
+    collaboration. Everyone else has architectural opinions.
+  blurb: >
+    A deeply humane examination of monorepos, shared ownership, dependency
+    boundaries, and the slow realisation that technical decisions are
+    rarely separable from social ones.
+  pullquote: >
+    “What do we live for, if not to make life less difficult for each other,
+    and occasionally to fix the build?”
+  contents:
+    - "Chapter 1: A Repository of Provincial Life"
+    - "Chapter 2: Casaubon’s Unfinished Build System"
+    - "Chapter 3: Dorothea Proposes Shared Ownership"
+    - "Chapter 4: The Reform Bill of Continuous Integration"
+
+- slug: silas-marner-and-the-lost-secret-key
+  live: false
+  publish_on: 2026-06-16
+  title: "Silas Marner and the Lost Secret Key"
+  subtitle: "Security, Trust, and the Perils of Local Storage"
+  author: "George Eliot"
+  topic: "Security"
+  teaser: >
+    Silas Marner keeps his secrets locally, trusts almost nobody, and is
+    devastated when access is unexpectedly compromised.
+  blurb: >
+    A moral fable about secret management, credential rotation, misplaced
+    trust, and the surprising possibility that community-based recovery
+    processes may outperform isolated operational paranoia.
+  pullquote: >
+    “No secret should be left alone in a cottage without proper encryption.”
+  contents:
+    - "Chapter 1: The Hoard Beneath the Floorboards"
+    - "Chapter 2: Credentials in Plain Sight"
+    - "Chapter 3: Raveloe Discovers Key Rotation"
+    - "Chapter 4: Eppie and the Principle of Least Privilege"
+
+- slug: dr-jekyll-and-mr-hydes-feature-flags
+  live: false
+  publish_on: 2026-06-17
+  title: "Dr Jekyll and Mr Hyde’s Feature Flags"
+  subtitle: "Progressive Delivery and the Divided Self"
+  author: "Robert Louis Stevenson"
+  topic: "Feature Flags"
+  teaser: >
+    Dr Jekyll deploys cautiously behind a feature flag. Mr Hyde enables it
+    globally without telling anyone.
+  blurb: >
+    A gothic investigation into progressive delivery, dark launches,
+    rollback discipline, and the terrifying discovery that every production
+    system contains impulses it would rather conceal.
+  pullquote: >
+    “Man is not truly one, but truly two; likewise, every feature has at
+    least two deployment states.”
+  contents:
+    - "Chapter 1: The Respectable Toggle"
+    - "Chapter 2: Mr Hyde Enables Production"
+    - "Chapter 3: Experiments Conducted After Midnight"
+    - "Chapter 4: Rollback Comes Too Late"
+
+- slug: treasure-island-and-dependency-management
+  live: false
+  publish_on: 2026-06-18
+  title: "Treasure Island and Dependency Management"
+  subtitle: "Maps, Lockfiles, and Suspicious Packages"
+  author: "Robert Louis Stevenson"
+  topic: "Dependencies"
+  teaser: >
+    Jim Hawkins finds a lockfile, a map, and several packages of deeply
+    uncertain provenance.
+  blurb: >
+    A swashbuckling guide to dependency management, supply-chain risk,
+    semantic versioning, and the wisdom of distrusting anything installed
+    by Long John Silver.
+  pullquote: >
+    “Fifteen men on a dead man’s branch; yo-ho-ho and a vulnerable dependency.”
+  contents:
+    - "Chapter 1: The Old Lockfile at the Admiral Benbow"
+    - "Chapter 2: Long John Silver Pins a Version"
+    - "Chapter 3: Mutiny in the Package Registry"
+    - "Chapter 4: The Treasure Was Reproducible Builds"
+
+- slug: sherlock-holmes-and-the-case-of-the-missing-semicolon
+  live: false
+  publish_on: 2026-06-19
+  title: "Sherlock Holmes and the Case of the Missing Semicolon"
+  subtitle: "Debugging by Deduction"
+  author: "Arthur Conan Doyle"
+  topic: "Debugging"
+  teaser: >
+    Holmes observes the failing test, the strange indentation, and the
+    developer who insists nothing has changed.
+  blurb: >
+    A rigorous introduction to debugging, log analysis, minimal
+    reproductions, and the disciplined refusal to invent explanations
+    before the evidence has been properly inspected.
+  pullquote: >
+    “When you have eliminated the impossible, whatever remains is probably
+    a missing semicolon.”
+  contents:
+    - "Chapter 1: A Study in Stack Traces"
+    - "Chapter 2: The Curious Incident of the Test That Did Not Run"
+    - "Chapter 3: Watson Adds Logging"
+    - "Chapter 4: The Semicolon at Baker Street"
+
+- slug: the-hound-of-the-baskervilles-and-incident-response
+  live: false
+  publish_on: 2026-06-20
+  title: "The Hound of the Baskervilles and Incident Response"
+  subtitle: "Postmortems on the Moor"
+  author: "Arthur Conan Doyle"
+  topic: "Incident Response"
+  teaser: >
+    Something terrible is happening in production, and everyone is blaming
+    a supernatural hound instead of checking the alerts.
+  blurb: >
+    A fogbound guide to incident response, escalation, postmortems, and the
+    importance of distinguishing genuine system failures from hereditary
+    panic and poorly configured monitoring.
+  pullquote: >
+    “The world is full of obvious things which nobody by any chance ever
+    observes until PagerDuty rings.”
+  contents:
+    - "Chapter 1: The Alert on the Moor"
+    - "Chapter 2: Sir Henry Ignores the Runbook"
+    - "Chapter 3: Holmes Correlates the Metrics"
+    - "Chapter 4: A Blameless Postmortem at Baskerville Hall"
+
+- slug: frankensteins-platform-engineering
+  live: false
+  publish_on: 2026-06-21
+  title: "Frankenstein’s Platform Engineering"
+  subtitle: "Assembling Internal Developer Platforms from Abandoned Parts"
+  author: "Mary Shelley"
+  topic: "Platform Engineering"
+  teaser: >
+    Victor Frankenstein builds a platform from spare components and is
+    horrified when developers begin depending on it.
+  blurb: >
+    A cautionary tale of internal developer platforms, golden paths,
+    ownership, maintenance, and the terrible responsibility that follows
+    when your creation becomes genuinely useful.
+  pullquote: >
+    “It lives; unfortunately, it also requires long-term support.”
+  contents:
+    - "Chapter 1: The Spark of Developer Experience"
+    - "Chapter 2: A Creature of Many Services"
+    - "Chapter 3: The Platform Demands Documentation"
+    - "Chapter 4: Victor Refuses the Support Rotation"
+
+- slug: dracula-and-access-control
+  live: false
+  publish_on: 2026-06-22
+  title: "Dracula and Access Control"
+  subtitle: "Invitations, Permissions, and Least Privilege"
+  author: "Bram Stoker"
+  topic: "Access Control"
+  teaser: >
+    Count Dracula cannot enter unless invited, making him surprisingly
+    attentive to authentication boundaries.
+  blurb: >
+    A blood-curdling guide to access control, permissions, authentication,
+    least privilege, and the operational risk of allowing ancient entities
+    excessive privileges inside your estate.
+  pullquote: >
+    “The old systems had many doors, and most of them were unfortunately
+    open.”
+  contents:
+    - "Chapter 1: The Invitation Boundary"
+    - "Chapter 2: Jonathan Harker Reviews the Permissions"
+    - "Chapter 3: Mina Implements Least Privilege"
+    - "Chapter 4: Revoking the Count’s Credentials"
+
+- slug: three-men-in-a-boat-and-container-orchestration
+  live: false
+  publish_on: 2026-06-23
+  title: "Three Men in a Boat and Container Orchestration"
+  subtitle: "Scheduling Workloads on the Thames"
+  author: "Jerome K. Jerome"
+  topic: "Container Orchestration"
+  teaser: >
+    Three men attempt to coordinate containers, workloads, and provisions
+    with only intermittent success and a great deal of unnecessary fuss.
+  blurb: >
+    A cheerful guide to container orchestration, scheduling, resource
+    allocation, and the eternal truth that distributed systems become more
+    complicated when everyone brings luggage.
+  pullquote: >
+    “We agreed that the cluster needed discipline, though none of us wished
+    to provide it.”
+  contents:
+    - "Chapter 1: Packing the Container"
+    - "Chapter 2: Scheduling on the River"
+    - "Chapter 3: Montmorency Disrupts the Cluster"
+    - "Chapter 4: A Surprisingly Pleasant Rollout to Oxford"
+
+- slug: a-room-with-a-view-source
+  live: false
+  publish_on: 2026-06-24
+  title: "A Room with a View Source"
+  subtitle: "Front-End Development and the Awakening of Perspective"
+  author: "E. M. Forster"
+  topic: "Front-End Development"
+  teaser: >
+    Lucy Honeychurch discovers that perspective matters, especially when
+    inspecting someone else’s HTML.
+  blurb: >
+    A refined introduction to front-end development, semantic markup,
+    progressive enhancement, and the liberating experience of discovering
+    that the source view reveals more than polite society intended.
+  pullquote: >
+    “Only connect — preferably with accessible markup and a working stylesheet.”
+  contents:
+    - "Chapter 1: The View from the Browser"
+    - "Chapter 2: Mr Beebe Inspects the DOM"
+    - "Chapter 3: Progressive Enhancement in Florence"
+    - "Chapter 4: Only Connect the Stylesheet"

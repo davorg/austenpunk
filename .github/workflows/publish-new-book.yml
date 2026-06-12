@@ -16,11 +16,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: ruby/setup-ruby@v1
+      - uses: shogo82148/actions-setup-perl@v1
         with:
-          ruby-version: "3.4"
+          perl-version: "5.40"
 
-      - run: ruby bin/publish_queued_books
+      - name: Install Perl dependencies
+        run: cpanm --notest --installdeps .
+
+      - run: perl bin/publish_queued_books
 
       - name: Commit changes
         id: commit

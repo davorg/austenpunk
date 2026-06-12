@@ -19,7 +19,7 @@ an automated workflow.
 | Data | YAML (`_data/`) |
 | Styles | Plain CSS (`assets/css/site.css`) |
 | Hosting | GitHub Pages |
-| Automation scripts | Ruby (`bin/publish_queued_books`) and Perl (`bin/mk_video`) |
+| Automation scripts | Perl (`bin/publish_queued_books` and `bin/mk_video`) |
 
 Build requires Ruby 3.4 and Bundler. Dependencies are declared in `Gemfile`
 (`jekyll`, `webrick`, `jekyll-sitemap`).
@@ -46,7 +46,7 @@ assets/
     covers/                  PNG cover images, one per book, named {slug}.png
     og_image.png             Shared Open Graph / Twitter card image
 bin/
-  publish_queued_books       Ruby script: promotes due books from queued_books.yml → books.yml
+  publish_queued_books       Perl script: promotes due books from queued_books.yml → books.yml
   mk_video                   Perl script: generates TikTok-style MP4 videos per book
 index.html                   Homepage: hero (latest book) + 3-book grid + about blurb
 books.html                   /books/ listing of all live books (alphabetical by title)
@@ -98,7 +98,7 @@ To publish immediately (skip the queue), add the entry directly to `_data/books.
 
 ### Daily publish cron (`.github/workflows/publish-new-book.yml`)
 - Runs at 00:10 UTC every day.
-- Executes `ruby bin/publish_queued_books` which:
+- Executes `perl bin/publish_queued_books` which:
   - Reads `_data/queued_books.yml`.
   - Moves entries whose `publish_on` ≤ today into `_data/books.yml` with `live: true`.
   - Writes both files back.

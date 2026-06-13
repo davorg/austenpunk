@@ -1,455 +1,378 @@
 ---
-- slug: wuthering-git
-  live: true
-  title: Wuthering Git
-  subtitle: Branching Strategies Driven Entirely by Revenge
-  author: Emily Brontë
-  published: 2026-05-24
-  topic: Version Control
-  teaser: 'Heathcliff''s approach to source code management has terrified development
-    teams for generations.
-
-    '
-  blurb: 'A storm-lashed guide to Git workflows, force-pushes, unresolved merge conflicts,
-    and the terrible consequences of allowing emotional intensity into your branching
-    strategy.
-
-    '
-  pullquote: "“The definitive guide to rebasing when everyone involved is making decisions
-    out of spite.”\n"
+- author: Emily Brontë
+  blurb: |
+    A storm-lashed guide to Git workflows, force-pushes, unresolved merge conflicts, and the terrible consequences of allowing emotional intensity into your branching strategy.
   contents:
   - 'Chapter 1: I Am Come Back to This Repository'
   - 'Chapter 2: The Force-Push on the Moor'
   - 'Chapter 3: Branches, Ghosts, and Unresolved Conflicts'
   - 'Chapter 4: Reader, I Squashed Him'
-- slug: pride-prejudice-and-pull-requests
   live: true
-  title: Pride, Prejudice, and Pull Requests
-  subtitle: Elizabeth Bennet Navigates Modern Code Review
-  author: Jane Austen
-  published: 2026-05-25
-  topic: Code Review
-  teaser: 'Elizabeth Bennet thought first impressions were difficult enough. Then
-    she encountered a 4,000-line pull request with no tests.
-
-    '
-  blurb: 'A sharply observed guide to pull requests, reviewer etiquette, constructive
-    criticism, and the delicate art of discovering that your first opinion of a codebase
-    may not have been entirely accurate.
-
-    '
-  pullquote: "“It is a truth universally acknowledged that a developer in possession
-    of a large diff must be in want of a reviewer.”\n"
+  published: 2026-05-24
+  pullquote: |
+    “The definitive guide to rebasing when everyone involved is making decisions out of spite.”
+  slug: wuthering-git
+  subtitle: Branching Strategies Driven Entirely by Revenge
+  teaser: |
+    Heathcliff's approach to source code management has terrified development teams for generations.
+  title: Wuthering Git
+  topic: Version Control
+- author: Jane Austen
+  blurb: |
+    A sharply observed guide to pull requests, reviewer etiquette, constructive criticism, and the delicate art of discovering that your first opinion of a codebase may not have been entirely accurate.
   contents:
   - 'Chapter 1: First Impressions'
   - 'Chapter 2: A Most Disagreeable Diff'
   - 'Chapter 3: In Which Mr Darcy Requests Changes'
   - 'Chapter 4: Reader, She Approved It'
-- slug: continuous-deployment-with-mr-rochester
   live: true
-  title: Continuous Deployment with Mr Rochester
-  subtitle: Secrets, Fire, and Production Infrastructure
-  author: Charlotte Brontë
-  published: 2026-05-26
-  topic: DevOps
-  teaser: 'Thornfield Hall seemed the ideal production environment until strange noises
-    emerged from the monitoring systems.
-
-    '
-  blurb: 'A gothic introduction to continuous deployment, incident response, rollback
-    strategies, and the importance of investigating any mysterious process that appears
-    to be running in the attic.
-
-    '
-  pullquote: "“Reader, I deployed it.”\n"
+  published: 2026-05-25
+  pullquote: |
+    “It is a truth universally acknowledged that a developer in possession of a large diff must be in want of a reviewer.”
+  slug: pride-prejudice-and-pull-requests
+  subtitle: Elizabeth Bennet Navigates Modern Code Review
+  teaser: |
+    Elizabeth Bennet thought first impressions were difficult enough. Then she encountered a 4,000-line pull request with no tests.
+  title: Pride, Prejudice, and Pull Requests
+  topic: Code Review
+- author: Charlotte Brontë
+  blurb: |
+    A gothic introduction to continuous deployment, incident response, rollback strategies, and the importance of investigating any mysterious process that appears to be running in the attic.
   contents:
   - 'Chapter 1: The Pipeline at Thornfield'
   - 'Chapter 2: A Suspicious Noise in Production'
   - 'Chapter 3: Backups, Rollbacks, and Other Hidden Wives'
   - 'Chapter 4: Reader, I Deployed It'
-- slug: emma-woodhouse-refactors-your-monolith
   live: true
-  title: Emma Woodhouse Refactors Your Monolith
-  subtitle: Confident Architectural Changes for Other People's Systems
-  author: Jane Austen
-  published: 2026-05-27
-  topic: Software Architecture
-  teaser: 'Emma Woodhouse has never written a line of production code, but that will
-    not prevent her from reorganising your entire application.
-
-    '
-  blurb: 'A brilliantly self-assured guide to refactoring monoliths, extracting services,
-    reorganising dependencies, and making confident architectural decisions before
-    consulting the people who understand the system.
-
-    '
-  pullquote: "“There is nothing like staying at home for real comfort, unless one
-    can also restructure the service boundaries.”\n"
+  published: 2026-05-26
+  pullquote: "“Reader, I deployed it.”\n"
+  slug: continuous-deployment-with-mr-rochester
+  subtitle: Secrets, Fire, and Production Infrastructure
+  teaser: |
+    Thornfield Hall seemed the ideal production environment until strange noises emerged from the monitoring systems.
+  title: Continuous Deployment with Mr Rochester
+  topic: DevOps
+- author: Jane Austen
+  blurb: |
+    A brilliantly self-assured guide to refactoring monoliths, extracting services, reorganising dependencies, and making confident architectural decisions before consulting the people who understand the system.
   contents:
   - 'Chapter 1: A Monolith of Some Consequence'
   - 'Chapter 2: Services I Have Matched Myself'
   - 'Chapter 3: The Misunderstanding at the API Boundary'
   - 'Chapter 4: It Was Badly Done, Indeed'
-- slug: sense-and-sensibility-testing
   live: true
-  title: Sense and Sensibility Testing
-  subtitle: Unit Tests, Integration Tests, and Emotional Resilience
-  author: Jane Austen
-  topic: Testing
-  teaser: 'Elinor prefers disciplined unit tests. Marianne embraces sprawling end-to-end
-    integration suites with dangerous emotional intensity.
-
-    '
-  blurb: 'A practical introduction to testing strategies, balancing careful isolation
-    with realistic system-wide verification, and understanding that excessive feeling
-    is rarely an adequate substitute for coverage.
-
-    '
-  pullquote: "“Know your own happiness. You want nothing but patience — or a few more
-    integration tests.”\n"
+  published: 2026-05-27
+  pullquote: |
+    “There is nothing like staying at home for real comfort, unless one can also restructure the service boundaries.”
+  slug: emma-woodhouse-refactors-your-monolith
+  subtitle: Confident Architectural Changes for Other People's Systems
+  teaser: |
+    Emma Woodhouse has never written a line of production code, but that will not prevent her from reorganising your entire application.
+  title: Emma Woodhouse Refactors Your Monolith
+  topic: Software Architecture
+- author: Jane Austen
+  blurb: |
+    A practical introduction to testing strategies, balancing careful isolation with realistic system-wide verification, and understanding that excessive feeling is rarely an adequate substitute for coverage.
   contents:
   - 'Chapter 1: Sensible Assertions'
   - 'Chapter 2: Marianne Discovers End-to-End Testing'
   - 'Chapter 3: Mock Objects and Emotional Turbulence'
   - 'Chapter 4: A Most Unexpected Regression'
-  published: '2026-05-28'
-- slug: observability-heights
   live: true
-  title: Observability Heights
-  subtitle: Logging, Metrics, and Unhealthy Emotional Dependencies
-  author: Emily Brontë
-  topic: Observability
-  teaser: 'Heathcliff discovers metrics, distributed tracing, and the destructive
-    consequences of becoming emotionally attached to production systems.
-
-    '
-  blurb: 'A bleak and windswept exploration of logging, metrics, tracing, and the
-    unhealthy psychological patterns that emerge when engineers begin treating operational
-    dashboards as extensions of their own souls.
-
-    '
-  pullquote: "“Whatever our observability stacks are made of, his and mine are the
-    same.”\n"
+  published: 2026-05-28
+  pullquote: |
+    “Know your own happiness. You want nothing but patience — or a few more integration tests.”
+  slug: sense-and-sensibility-testing
+  subtitle: Unit Tests, Integration Tests, and Emotional Resilience
+  teaser: |
+    Elinor prefers disciplined unit tests. Marianne embraces sprawling end-to-end integration suites with dangerous emotional intensity.
+  title: Sense and Sensibility Testing
+  topic: Testing
+- author: Emily Brontë
+  blurb: |
+    A bleak and windswept exploration of logging, metrics, tracing, and the unhealthy psychological patterns that emerge when engineers begin treating operational dashboards as extensions of their own souls.
   contents:
   - 'Chapter 1: The Logs Upon the Moor'
   - 'Chapter 2: Catherine in the Monitoring Dashboard'
   - 'Chapter 3: Traces of Long-Abandoned Requests'
   - 'Chapter 4: Reader, the Latency Was Inside Us All Along'
-  published: '2026-05-29'
-- slug: persuasion-driven-development
   live: true
-  title: Persuasion-Driven Development
-  subtitle: Quietly Introducing Sensible Engineering Practices
-  author: Jane Austen
-  topic: Engineering Culture
-  teaser: 'Anne Elliot gently recommends sensible engineering improvements while everybody
-    else pursues far louder and worse ideas.
-
-    '
-  blurb: 'A thoughtful guide to introducing engineering standards, improving team
-    culture, and quietly steering organisations toward competence without needing
-    to become the loudest person in the architecture meeting.
-
-    '
-  pullquote: "“She had been forced into prudence in her youth; she learned observability
-    in her later years.”\n"
+  published: 2026-05-29
+  pullquote: |
+    “Whatever our observability stacks are made of, his and mine are the same.”
+  slug: observability-heights
+  subtitle: Logging, Metrics, and Unhealthy Emotional Dependencies
+  teaser: |
+    Heathcliff discovers metrics, distributed tracing, and the destructive consequences of becoming emotionally attached to production systems.
+  title: Observability Heights
+  topic: Observability
+- author: Jane Austen
+  blurb: |
+    A thoughtful guide to introducing engineering standards, improving team culture, and quietly steering organisations toward competence without needing to become the loudest person in the architecture meeting.
   contents:
   - 'Chapter 1: The Unheeded Recommendation'
   - 'Chapter 2: Captain Wentworth Reviews the RFC'
   - 'Chapter 3: Gradual Improvement at Kellynch Hall'
   - 'Chapter 4: A Sensible Migration Strategy'
-  published: '2026-05-30'
-- slug: jane-eyre-and-the-microservices-of-thornfield-hall
   live: true
-  title: Jane Eyre and the Microservices of Thornfield Hall
-  subtitle: Distributed Systems with Hidden Complexity
-  author: Charlotte Brontë
-  topic: Microservices
-  teaser: 'Thornfield Hall appeared elegant from the outside, but inside lay a deeply
-    alarming distributed architecture.
-
-    '
-  blurb: 'An unsettling examination of microservices, hidden dependencies, undocumented
-    interfaces, and the consequences of discovering that critical business logic has
-    been locked in the attic for years.
-
-    '
-  pullquote: "“Do you think I am an automaton? — a machine without dependencies?”\n"
+  published: 2026-05-30
+  pullquote: |
+    “She had been forced into prudence in her youth; she learned observability in her later years.”
+  slug: persuasion-driven-development
+  subtitle: Quietly Introducing Sensible Engineering Practices
+  teaser: |
+    Anne Elliot gently recommends sensible engineering improvements while everybody else pursues far louder and worse ideas.
+  title: Persuasion-Driven Development
+  topic: Engineering Culture
+- author: Charlotte Brontë
+  blurb: |
+    An unsettling examination of microservices, hidden dependencies, undocumented interfaces, and the consequences of discovering that critical business logic has been locked in the attic for years.
   contents:
   - 'Chapter 1: Services in the Attic'
   - 'Chapter 2: The Secret API Boundary'
   - 'Chapter 3: Reader, the Queue Had Failed'
   - 'Chapter 4: A Distributed Architecture Most Inconvenient'
-  published: '2026-05-31'
-- slug: mansfield-park-and-the-ethics-of-ai
   live: true
-  title: Mansfield Park and the Ethics of AI
-  subtitle: Just Because You Can Automate Something...
-  author: Jane Austen
-  topic: AI Ethics
-  teaser: 'Fanny Price asks whether automating every human decision is necessarily
-    the triumph of progress that everyone else assumes.
-
-    '
-  blurb: 'A morally serious examination of artificial intelligence, automation, responsibility,
-    and the uncomfortable possibility that technical capability may not always align
-    with ethical wisdom.
-
-    '
-  pullquote: "“Selfishness must always be forgiven, you know, because there is no
-    hope of a cure — especially in venture capital.”\n"
+  published: 2026-05-31
+  pullquote: |
+    “Do you think I am an automaton? — a machine without dependencies?”
+  slug: jane-eyre-and-the-microservices-of-thornfield-hall
+  subtitle: Distributed Systems with Hidden Complexity
+  teaser: |
+    Thornfield Hall appeared elegant from the outside, but inside lay a deeply alarming distributed architecture.
+  title: Jane Eyre and the Microservices of Thornfield Hall
+  topic: Microservices
+- author: Jane Austen
+  blurb: |
+    A morally serious examination of artificial intelligence, automation, responsibility, and the uncomfortable possibility that technical capability may not always align with ethical wisdom.
   contents:
   - 'Chapter 1: The Automation Proposal'
   - 'Chapter 2: Sir Thomas Invests in Machine Learning'
   - 'Chapter 3: Fanny Raises Mild but Serious Concerns'
   - 'Chapter 4: The Catastrophic Demo'
-  published: '2026-06-01'
-- slug: northanger-ci-cd
   live: true
-  title: Northanger CI/CD
-  subtitle: The Jenkins Server Is Surely Haunted
-  author: Jane Austen
-  topic: CI/CD
-  teaser: 'Catherine Morland becomes convinced that the build pipeline conceals dark
-    and supernatural secrets.
-
-    '
-  blurb: 'A gothic comedy about CI/CD pipelines, inexplicable build failures, strange
-    noises from Jenkins at midnight, and the dangers of allowing imagination to roam
-    freely through deployment infrastructure.
-
-    '
-  pullquote: "“No one who had ever seen Jenkins in its infancy would have supposed
-    it born to be an automated pipeline.”\n"
+  published: 2026-06-01
+  pullquote: |
+    “Selfishness must always be forgiven, you know, because there is no hope of a cure — especially in venture capital.”
+  slug: mansfield-park-and-the-ethics-of-ai
+  subtitle: Just Because You Can Automate Something...
+  teaser: |
+    Fanny Price asks whether automating every human decision is necessarily the triumph of progress that everyone else assumes.
+  title: Mansfield Park and the Ethics of AI
+  topic: AI Ethics
+- author: Jane Austen
+  blurb: |
+    A gothic comedy about CI/CD pipelines, inexplicable build failures, strange noises from Jenkins at midnight, and the dangers of allowing imagination to roam freely through deployment infrastructure.
   contents:
   - 'Chapter 1: The Abbey Build Server'
   - 'Chapter 2: A Most Suspicious Deployment Failure'
   - 'Chapter 3: The YAML of Udolpho'
   - 'Chapter 4: Reader, It Was a Missing Semicolon'
-  published: '2026-06-02'
-- slug: the-tenant-of-wildfell-devops
   live: true
-  title: The Tenant of Wildfell DevOps
-  subtitle: Escaping Toxic Engineering Culture
-  author: Anne Brontë
-  topic: DevOps
-  teaser: 'Helen Graham leaves a catastrophically unhealthy engineering culture and
-    rebuilds her infrastructure somewhere quieter.
-
-    '
-  blurb: 'A remarkably modern account of psychological safety, sustainable operations,
-    and the difficult process of escaping organisations where every deployment is
-    treated as an opportunity for public humiliation.
-
-    '
-  pullquote: "“I am satisfied that if a book is a good one, it is so whatever the
-    gender of the deployment engineer.”\n"
+  published: 2026-06-02
+  pullquote: |
+    “No one who had ever seen Jenkins in its infancy would have supposed it born to be an automated pipeline.”
+  slug: northanger-ci-cd
+  subtitle: The Jenkins Server Is Surely Haunted
+  teaser: |
+    Catherine Morland becomes convinced that the build pipeline conceals dark and supernatural secrets.
+  title: Northanger CI/CD
+  topic: CI/CD
+- author: Anne Brontë
+  blurb: |
+    A remarkably modern account of psychological safety, sustainable operations, and the difficult process of escaping organisations where every deployment is treated as an opportunity for public humiliation.
   contents:
   - 'Chapter 1: The Incident Review'
   - 'Chapter 2: Escaping the Monolithic Team Structure'
   - 'Chapter 3: Rebuilding Trust and Infrastructure'
   - 'Chapter 4: A Healthier Production Environment'
-  published: '2026-06-03'
-- slug: agile-and-sensibility
   live: true
-  title: Agile and Sensibility
-  subtitle: Scrum, Sprint Planning, and Dangerous Emotional Intensity
-  author: Jane Austen
-  topic: Agile
-  teaser: 'Marianne embraces Scrum with alarming emotional commitment while Elinor
-    quietly updates the documentation.
-
-    '
-  blurb: 'An emotionally charged introduction to Agile methodologies, sprint planning,
-    retrospectives, and the difficult challenge of maintaining professional composure
-    during estimation sessions.
-
-    '
-  pullquote: "“Elinor agreed to it all, for she did not think he deserved the compliment
-    of rational opposition.”\n"
+  published: 2026-06-03
+  pullquote: |
+    “I am satisfied that if a book is a good one, it is so whatever the gender of the deployment engineer.”
+  slug: the-tenant-of-wildfell-devops
+  subtitle: Escaping Toxic Engineering Culture
+  teaser: |
+    Helen Graham leaves a catastrophically unhealthy engineering culture and rebuilds her infrastructure somewhere quieter.
+  title: The Tenant of Wildfell DevOps
+  topic: DevOps
+- author: Jane Austen
+  blurb: |
+    An emotionally charged introduction to Agile methodologies, sprint planning, retrospectives, and the difficult challenge of maintaining professional composure during estimation sessions.
   contents:
   - 'Chapter 1: The Sprint Planning Meeting'
   - 'Chapter 2: Marianne Discovers Velocity'
   - 'Chapter 3: Daily Stand-Ups and Emotional Collapse'
   - 'Chapter 4: Elinor Writes the Documentation'
-  published: '2026-06-04'
-- slug: charlotte-brontes-guide-to-remote-working-on-the-yorkshire-moors
   live: true
-  title: Charlotte Brontë’s Guide to Remote Working on the Yorkshire Moors
-  subtitle: Distributed Teams in Bleak and Windswept Environments
-  author: Charlotte Brontë
-  topic: Remote Working
-  teaser: 'A practical guide to asynchronous collaboration in isolated and emotionally
-    intense environments.
-
-    '
-  blurb: 'Covering remote communication, work-life balance, and maintaining team cohesion
-    despite bleak weather and overwhelming existential longing, this essential handbook
-    remains surprisingly relevant.
-
-    '
-  pullquote: "“I avoid great parties and stay at home — precisely because that enables
-    me to get more done on Slack.”\n"
+  published: 2026-06-04
+  pullquote: |
+    “Elinor agreed to it all, for she did not think he deserved the compliment of rational opposition.”
+  slug: agile-and-sensibility
+  subtitle: Scrum, Sprint Planning, and Dangerous Emotional Intensity
+  teaser: |
+    Marianne embraces Scrum with alarming emotional commitment while Elinor quietly updates the documentation.
+  title: Agile and Sensibility
+  topic: Agile
+- author: Charlotte Brontë
+  blurb: |
+    Covering remote communication, work-life balance, and maintaining team cohesion despite bleak weather and overwhelming existential longing, this essential handbook remains surprisingly relevant.
   contents:
   - 'Chapter 1: The Solitary Workspace'
   - 'Chapter 2: Windswept Zoom Calls'
   - 'Chapter 3: The Etiquette of Muted Microphones'
   - 'Chapter 4: Reader, I Worked Remotely'
-  published: '2026-06-05'
-- slug: mr-darcy-explains-impostor-syndrome
   live: true
-  title: Mr Darcy Explains Impostor Syndrome
-  subtitle: My Good Opinion, Once Lost...
-  author: Jane Austen
-  topic: Career Development
-  teaser: 'Fitzwilliam Darcy attempts to understand why software engineers with obvious
-    competence remain convinced they are frauds.
-
-    '
-  blurb: 'A quietly sympathetic exploration of confidence, self-doubt, career progression,
-    and the tendency of highly capable developers to assume everyone else understands
-    Kubernetes better than they do.
-
-    '
-  pullquote: "“My good opinion, once lost, is lost forever — particularly after a
-    failed production deployment.”\n"
+  published: 2026-06-05
+  pullquote: |
+    “I avoid great parties and stay at home — precisely because that enables me to get more done on Slack.”
+  slug: charlotte-brontes-guide-to-remote-working-on-the-yorkshire-moors
+  subtitle: Distributed Teams in Bleak and Windswept Environments
+  teaser: |
+    A practical guide to asynchronous collaboration in isolated and emotionally intense environments.
+  title: Charlotte Brontë’s Guide to Remote Working on the Yorkshire Moors
+  topic: Remote Working
+- author: Jane Austen
+  blurb: |
+    A quietly sympathetic exploration of confidence, self-doubt, career progression, and the tendency of highly capable developers to assume everyone else understands Kubernetes better than they do.
   contents:
   - 'Chapter 1: The Accomplished Engineer'
   - 'Chapter 2: False Confidence at Netherfield'
   - 'Chapter 3: Elizabeth Reviews Her Performance'
   - 'Chapter 4: Reader, You Probably Are Qualified'
-  published: '2026-06-06'
-- slug: the-importance-of-being-ernest-but-also-idempotent
   live: true
-  title: The Importance of Being Ernest But Also Idempotent
-  subtitle: Reliable Systems for Serious People
-  author: Oscar Wilde
-  topic: Distributed Systems
-  teaser: 'In matters of distributed computing, sincerity is rarely sufficient; one
-    must also guarantee repeatable outcomes.
-
-    '
-  blurb: 'A dazzling comedy of manners concerning idempotency, retries, message delivery
-    guarantees, and the disastrous social consequences of executing the same financial
-    transaction twice.
-
-    '
-  pullquote: "“To lose one packet may be regarded as a misfortune; to lose both looks
-    like carelessness.”\n"
+  published: 2026-06-06
+  pullquote: |
+    “My good opinion, once lost, is lost forever — particularly after a failed production deployment.”
+  slug: mr-darcy-explains-impostor-syndrome
+  subtitle: My Good Opinion, Once Lost...
+  teaser: |
+    Fitzwilliam Darcy attempts to understand why software engineers with obvious competence remain convinced they are frauds.
+  title: Mr Darcy Explains Impostor Syndrome
+  topic: Career Development
+- author: Oscar Wilde
+  blurb: |
+    A dazzling comedy of manners concerning idempotency, retries, message delivery guarantees, and the disastrous social consequences of executing the same financial transaction twice.
   contents:
   - 'Chapter 1: The Duplicate Request'
   - 'Chapter 2: A Trivial Matter of Consistency'
   - 'Chapter 3: Cecily Retries the Transaction'
   - 'Chapter 4: The Importance of Stable Endpoints'
-  published: '2026-06-07'
-- slug: villette-and-variable-scope
   live: true
-  title: Villette and Variable Scope
-  subtitle: Isolated State Leaking Across Modules
-  author: Charlotte Brontë
-  topic: Programming Languages
-  teaser: 'Lucy Snowe investigates mysterious state leakage across isolated and emotionally
-    repressed code modules.
-
-    '
-  blurb: 'A psychologically complex examination of variable scope, hidden state, namespace
-    collisions, and the emotional consequences of badly managed globals in long-running
-    applications.
-
-    '
-  pullquote: "“I was both constrained and silent — much like a lexical variable.”\n"
+  published: 2026-06-07
+  pullquote: |
+    “To lose one packet may be regarded as a misfortune; to lose both looks like carelessness.”
+  slug: the-importance-of-being-ernest-but-also-idempotent
+  subtitle: Reliable Systems for Serious People
+  teaser: |
+    In matters of distributed computing, sincerity is rarely sufficient; one must also guarantee repeatable outcomes.
+  title: The Importance of Being Ernest But Also Idempotent
+  topic: Distributed Systems
+- author: Charlotte Brontë
+  blurb: |
+    A psychologically complex examination of variable scope, hidden state, namespace collisions, and the emotional consequences of badly managed globals in long-running applications.
   contents:
   - 'Chapter 1: The Hidden Namespace'
   - 'Chapter 2: Unexpected State Mutation'
   - 'Chapter 3: Lucy Encounters a Global Variable'
   - 'Chapter 4: Encapsulation and Despair'
-  published: '2026-06-08'
-- slug: catherine-earnshaws-guide-to-conflict-resolution
   live: true
-  title: Catherine Earnshaw’s Guide to Conflict Resolution
-  subtitle: A Very Short Book
-  author: Emily Brontë
-  topic: Management
-  teaser: 'Catherine Earnshaw presents a concise and entirely ineffective approach
-    to interpersonal management.
-
-    '
-  blurb: 'A catastrophically brief examination of conflict resolution strategies,
-    demonstrating mainly what happens when strong emotions are allowed to dictate
-    both leadership and version control decisions.
-
-    '
-  pullquote: "“Whatever our souls are made of, HR strongly recommends mediation.”\n"
+  published: 2026-06-08
+  pullquote: |
+    “I was both constrained and silent — much like a lexical variable.”
+  slug: villette-and-variable-scope
+  subtitle: Isolated State Leaking Across Modules
+  teaser: |
+    Lucy Snowe investigates mysterious state leakage across isolated and emotionally repressed code modules.
+  title: Villette and Variable Scope
+  topic: Programming Languages
+- author: Emily Brontë
+  blurb: |
+    A catastrophically brief examination of conflict resolution strategies, demonstrating mainly what happens when strong emotions are allowed to dictate both leadership and version control decisions.
   contents:
   - 'Chapter 1: Shouting on the Moor'
   - 'Chapter 2: Escalation Procedures'
   - 'Chapter 3: Absolutely No Compromise'
   - 'Chapter 4: The Entire Team Resigns'
-  published: '2026-06-09'
-- slug: jane-austens-domain-driven-design
   live: true
-  title: Jane Austen’s Domain-Driven Design
-  subtitle: Bounded Contexts in Hertfordshire
-  author: Jane Austen
-  topic: Software Architecture
-  teaser: 'The social geography of Hertfordshire proves unexpectedly useful for understanding
-    bounded contexts and aggregate roots.
-
-    '
-  blurb: 'A refined introduction to domain-driven design, demonstrating that the complexities
-    of inheritance, social obligation, and marriage markets map remarkably well onto
-    modern software architecture.
-
-    '
-  pullquote: "“It is particularly incumbent on those who never change their opinion
-    to be secure of judging properly at first.”\n"
+  published: 2026-06-09
+  pullquote: |
+    “Whatever our souls are made of, HR strongly recommends mediation.”
+  slug: catherine-earnshaws-guide-to-conflict-resolution
+  subtitle: A Very Short Book
+  teaser: |
+    Catherine Earnshaw presents a concise and entirely ineffective approach to interpersonal management.
+  title: Catherine Earnshaw’s Guide to Conflict Resolution
+  topic: Management
+- author: Jane Austen
+  blurb: |
+    A refined introduction to domain-driven design, demonstrating that the complexities of inheritance, social obligation, and marriage markets map remarkably well onto modern software architecture.
   contents:
   - 'Chapter 1: The Domain of Longbourn'
   - 'Chapter 2: Bounded Contexts at Pemberley'
   - 'Chapter 3: The Ubiquitous Language of Courtship'
   - 'Chapter 4: Aggregates and Entailments'
-  published: '2026-06-10'
-- slug: rebecca-and-event-sourcing
   live: true
-  title: Rebecca and Event Sourcing
-  subtitle: The Previous State Is Always Haunting the Current System
-  author: Daphne du Maurier
-  topic: Event Sourcing
-  teaser: 'Manderley burns, but the historical event log remains stubbornly intact.
-
-    '
-  blurb: 'A haunting meditation on event sourcing, immutable history, and the unsettling
-    discovery that previous application states continue exerting influence long after
-    everyone wishes they had disappeared.
-
-    '
-  pullquote: "“Last night I dreamt I went to the audit log again.”\n"
+  published: 2026-06-10
+  pullquote: |
+    “It is particularly incumbent on those who never change their opinion to be secure of judging properly at first.”
+  slug: jane-austens-domain-driven-design
+  subtitle: Bounded Contexts in Hertfordshire
+  teaser: |
+    The social geography of Hertfordshire proves unexpectedly useful for understanding bounded contexts and aggregate roots.
+  title: Jane Austen’s Domain-Driven Design
+  topic: Software Architecture
+- author: Daphne du Maurier
+  blurb: |
+    A haunting meditation on event sourcing, immutable history, and the unsettling discovery that previous application states continue exerting influence long after everyone wishes they had disappeared.
   contents:
   - 'Chapter 1: The Immutable Event Store'
   - 'Chapter 2: Rebecca Commits to Main'
   - 'Chapter 3: Replaying Historical Catastrophes'
   - 'Chapter 4: Manderley and the Append-Only Architecture'
-  published: '2026-06-11'
-- slug: miss-havishams-legacy-code
   live: true
-  title: Miss Havisham’s Legacy Code
-  subtitle: Nobody Dares Touch the Build System
-  author: Charles Dickens
-  topic: Legacy Systems
-  teaser: 'The build pipeline has remained untouched for decades, and everyone is
-    far too frightened to investigate it properly.
-
-    '
-  blurb: 'A gloomy but practical guide to maintaining legacy systems, surviving inherited
-    technical debt, and understanding why some applications seem emotionally incapable
-    of modernisation.
-
-    '
-  pullquote: "“I have seen so much done, that it would be strange if I could be surprised
-    by a Perl CGI application.”\n"
+  published: 2026-06-11
+  pullquote: |
+    “Last night I dreamt I went to the audit log again.”
+  slug: rebecca-and-event-sourcing
+  subtitle: The Previous State Is Always Haunting the Current System
+  teaser: |
+    Manderley burns, but the historical event log remains stubbornly intact.
+  title: Rebecca and Event Sourcing
+  topic: Event Sourcing
+- author: Charles Dickens
+  blurb: |
+    A gloomy but practical guide to maintaining legacy systems, surviving inherited technical debt, and understanding why some applications seem emotionally incapable of modernisation.
   contents:
   - 'Chapter 1: Great Expectations of Refactoring'
   - 'Chapter 2: The Wedding Cake Deployment Strategy'
   - 'Chapter 3: Estella Reviews the Build Scripts'
   - 'Chapter 4: Pip Encounters Technical Debt'
-  published: '2026-06-12'
+  live: true
+  published: 2026-06-12
+  pullquote: |
+    “I have seen so much done, that it would be strange if I could be surprised by a Perl CGI application.”
+  slug: miss-havishams-legacy-code
+  subtitle: Nobody Dares Touch the Build System
+  teaser: |
+    The build pipeline has remained untouched for decades, and everyone is far too frightened to investigate it properly.
+  title: Miss Havisham’s Legacy Code
+  topic: Legacy Systems
+- author: Thomas Hardy
+  blurb: |
+    A tragic introduction to database normalisation, referential integrity, and the devastating consequences of allowing historical errors to propagate unchecked through successive generations of schema design.
+  contents:
+  - 'Chapter 1: The First Normal Form of Innocence'
+  - 'Chapter 2: Angel Clare Denormalises for Performance'
+  - 'Chapter 3: Referential Integrity at Flintcomb-Ash'
+  - 'Chapter 4: A Cruel Constraint Is Enforced'
+  live: true
+  published: 2026-06-13
+  pullquote: |
+    “The database was pure, but the data model had other opinions.”
+  slug: tess-of-the-durbervilles-and-database-normalisation
+  subtitle: Reducing Redundancy in a Cruel and Unforgiving Schema
+  teaser: |
+    Tess discovers that duplicated data, inherited assumptions, and badly designed relationships can ruin absolutely everything.
+  title: Tess of the d’Urbervilles and Database Normalisation
+  topic: Database Design

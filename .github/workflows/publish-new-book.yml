@@ -36,7 +36,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/books.yml _data/queued_books.yml
+          git add _data/books.yml
           git commit -m "Publish queued Austenpunk books"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -46,4 +46,3 @@ jobs:
         run: gh workflow run pages.yml
         env:
           GH_TOKEN: ${{ github.token }}
-

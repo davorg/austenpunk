@@ -31,8 +31,7 @@ Build requires Ruby 3.4 and Bundler. Dependencies are declared in `Gemfile`
 ```
 _config.yml                  Jekyll configuration (site title, URL, plugins)
 _data/
-  books.yml                  Live books (live: true), sorted descending by published date on the site
-  queued_books.yml           Upcoming books (live: false) with a publish_on date
+  books.yml                  All books, using `live: true` for published entries and future `published` dates for scheduled books
 _includes/
   book-card.html             Reusable card component used on the homepage grid
 _layouts/
@@ -46,7 +45,7 @@ assets/
     covers/                  PNG cover images, one per book, named {slug}.png
     og_image.png             Shared Open Graph / Twitter card image
 bin/
-  publish_queued_books       Perl script: promotes due books from queued_books.yml → books.yml
+  publish_queued_books       Perl script: flips due books from `live: false` to `live: true`
   mk_video                   Perl script: generates TikTok-style MP4 videos per book
 index.html                   Homepage: hero (latest book) + 3-book grid + about blurb
 books.html                   /books/ listing of all live books (alphabetical by title)
@@ -58,39 +57,37 @@ CNAME                        GitHub Pages custom domain (austenpunk.dev)
 
 ## Book Data Schema
 
-Every book entry (in either YAML file) uses these fields:
+Every book entry uses these fields:
 
 | Field | Type | Notes |
 |---|---|---|
 | `slug` | string | URL-safe identifier; also the cover image filename (`assets/images/covers/{slug}.png`) |
-| `live` | boolean | `true` in `books.yml` once published |
+| `live` | boolean | `true` once published, `false` while still scheduled |
 | `title` | string | Full punny title |
 | `subtitle` | string | Secondary title line |
 | `author` | string | The fictional (classical) author name |
 | `topic` | string | Software engineering subject (e.g. "CI/CD", "Observability") |
-| `published` | date string | ISO 8601 (`YYYY-MM-DD`); set when moved to books.yml |
-| `publish_on` | date | In `queued_books.yml` only; when to go live |
+| `published` | date string | ISO 8601 (`YYYY-MM-DD`); used for both published and scheduled books |
 | `teaser` | string | Short 1–2 sentence promo shown on book cards |
 | `blurb` | string | Longer paragraph shown on the book detail page |
 | `pullquote` | string | Fake review quote, double-quoted, ends with `\n` |
 | `contents` | list of strings | Chapter titles (usually 4 entries) |
 
 ### YAML style conventions
-- `books.yml` uses inline YAML (flow scalars with `'` quoting, trailing `\n` in pullquotes).
-- `queued_books.yml` uses block YAML (`>` folded scalars, explicit list syntax).
+- `books.yml` is kept in `published` date order.
 
 ---
 
 ## How to Add a New Book
 
-1. **Write the entry** — add it to `_data/queued_books.yml` with `live: false` and
-   a `publish_on` date, following the block YAML style of existing entries.
+1. **Write the entry** — add it to `_data/books.yml` with `live: false` and
+   the future `published` date when it should go live.
 2. **Add the cover image** — place a PNG file at `assets/images/covers/{slug}.png`
    (portrait orientation, consistent with existing covers).
-3. The daily publish workflow will automatically promote the book on its `publish_on` date.
+3. The daily publish workflow will automatically flip `live` to `true` on its `published` date.
 
-To publish immediately (skip the queue), add the entry directly to `_data/books.yml` with
-`live: true` and `published: YYYY-MM-DD`, using the inline YAML style of that file.
+To publish immediately, add the entry directly to `_data/books.yml` with
+`live: true` and `published: YYYY-MM-DD`.
 
 ---
 
@@ -99,10 +96,10 @@ To publish immediately (skip the queue), add the entry directly to `_data/books.
 ### Daily publish cron (`.github/workflows/publish-new-book.yml`)
 - Runs at 00:10 UTC every day.
 - Executes `perl bin/publish_queued_books` which:
-  - Reads `_data/queued_books.yml`.
-  - Moves entries whose `publish_on` ≤ today into `_data/books.yml` with `live: true`.
-  - Writes both files back.
-- Commits and pushes the updated YAML files.
+  - Reads `_data/books.yml`.
+  - Flips `live` to `true` for books whose `published` date is today or earlier.
+  - Writes the updated file back.
+- Commits and pushes the updated YAML file.
 - Triggers the pages build workflow if any books were published.
 
 ### Site deployment (`.github/workflows/pages.yml`)
@@ -141,7 +138,7 @@ perl bin/mk_video <book-slug>
 ```
 
 **Process:**
-1. Looks up the book in `_data/books.yml` or `_data/queued_books.yml` by slug.
+1. Looks up the book in `_data/books.yml` by slug.
 2. Generates a ~75-word deadpan voiceover script via OpenAI (`gpt-5.5`).
 3. Synthesises audio via ElevenLabs TTS (`eleven_multilingual_v2`).
 4. Combines the cover image (`assets/images/covers/{slug}.png`) with the audio using
@@ -168,8 +165,7 @@ re-running partial steps. The `tmp/` directory is gitignored.
 - **Cover images are mandatory.** Every book entry must have a corresponding PNG at
   `assets/images/covers/{slug}.png`. The site will render broken image tags otherwise.
 - **Only books with `live: true` appear on the public site.** The `BookPageGenerator` plugin
-  in `_plugins/book_pages.rb` reads `site.data["books"]` which maps to `_data/books.yml`.
-  Queued books are not surfaced publicly.
+  in `_plugins/book_pages.rb` reads `_data/books.yml` and filters out scheduled books.
 - **The `slug` field determines the URL, filename, and cover path** — it must be unique,
   lowercase, hyphen-separated, and URL-safe.
 - **No tests exist.** The only validation is a successful `bundle exec jekyll build`.

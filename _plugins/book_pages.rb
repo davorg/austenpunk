@@ -18,7 +18,7 @@ class BookPageGenerator < Jekyll::Generator
   safe true
 
   def generate(site)
-    site.data["books"].each do |book|
+    site.data["books"].select { |book| book["live"] }.each do |book|
       site.pages << BookPage.new(site, book)
     end
   end

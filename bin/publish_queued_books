@@ -8,32 +8,16 @@ use DateTime;
 local $YAML::XS::Boolean = 'JSON::PP';
 
 my $books_path = '_data/books.yml';
-my $queue_path = '_data/queued_books.yml';
 
 my $today = DateTime->today->ymd;
 
 my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
-my $queue = -f $queue_path ? ( LoadFile($queue_path) // [] ) : [];
 
-my ( @ready, @waiting );
-for my $book (@$queue) {
-    my $publish_on = $book->{publish_on};
-    if ( "$publish_on" le $today ) {
-        push @ready, $book;
-    }
-    else {
-        push @waiting, $book;
-    }
+for my $book (@$books) {
+    next if $book->{live};
+    next unless "$book->{published}" le $today;
+
+    $book->{live} = JSON::PP::true;
 }
-
-for my $book (@ready) {
-    my $publish_on = delete $book->{publish_on};
-    $book->{published} = "$publish_on";
-    $book->{live}      = JSON::PP::true;
-}
-
-push @$books, @ready;
 
 DumpFile( $books_path, $books );
-DumpFile( $queue_path, \@waiting );
-

@@ -19,9 +19,7 @@ my $eleven_key = $ENV{ELEVENLABS_API_KEY}
 my $voice_id = $ENV{ELEVENLABS_VOICE_ID}
   or die "Set ELEVENLABS_VOICE_ID for now\n";
 
-my @books;
-push @books, @{ LoadFile("_data/books.yml") || [] };
-push @books, @{ LoadFile("_data/queued_books.yml") || [] };
+my @books = @{ LoadFile("_data/books.yml") || [] };
 
 my ($book) = grep { $_->{slug} eq $slug } @books;
 die "No book found for slug [$slug]\n" unless $book;

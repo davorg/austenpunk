@@ -1,0 +1,23 @@
+#!/usr/bin/env perl
+
+use v5.40;
+use YAML::XS  qw(LoadFile);
+use Path::Tiny qw(path);
+
+binmode STDOUT, ':encoding(UTF-8)';
+
+my $books_path = '_data/books.yml';
+my $covers_dir = path('assets/images/covers');
+
+my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
+
+for my $book (@$books) {
+    next if $book->{live};
+
+    my $cover = $covers_dir->child("$book->{slug}.png");
+    my $line = "$book->{published} $book->{title}";
+
+    $line .= " (missing cover: $cover)" unless -e $cover;
+
+    say $line;
+}

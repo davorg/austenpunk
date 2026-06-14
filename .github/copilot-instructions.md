@@ -19,7 +19,7 @@ an automated workflow.
 | Data | YAML (`_data/`) |
 | Styles | Plain CSS (`assets/css/site.css`) |
 | Hosting | GitHub Pages |
-| Automation scripts | Perl (`bin/publish_queued_books` and `bin/mk_video`) |
+| Automation scripts | Perl (`bin/publish_queued_books`, `bin/check_upcoming`, and `bin/mk_video`) |
 
 Build requires Ruby 3.4 and Bundler. Dependencies are declared in `Gemfile`
 (`jekyll`, `webrick`, `jekyll-sitemap`).
@@ -46,6 +46,7 @@ assets/
     og_image.png             Shared Open Graph / Twitter card image
 bin/
   publish_queued_books       Perl script: flips due books from `live: false` to `live: true`
+  check_upcoming             Perl script: lists scheduled books and flags missing cover images
   mk_video                   Perl script: generates TikTok-style MP4 videos per book
 index.html                   Homepage: hero (latest book) + 3-book grid + about blurb
 books.html                   /books/ listing of all live books (alphabetical by title)

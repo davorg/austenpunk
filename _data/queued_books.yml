@@ -1,22 +1,4 @@
 ---
-- author: Thomas Hardy
-  blurb: |
-    A pastoral guide to cloud architecture, resilience, autoscaling, and the difficulty of maintaining infrastructure when everyone involved is distracted by weather, sheep, and emotional misconfiguration.
-  contents:
-  - 'Chapter 1: Elastic Compute at Weatherbury'
-  - 'Chapter 2: Gabriel Oak Configures the Load Balancer'
-  - 'Chapter 3: Troy Introduces an Unreviewed Change'
-  - 'Chapter 4: Scaling Horizontally Across the Downs'
-  live: false
-  publish_on: 2026-06-14
-  pullquote: |
-    “It is difficult for a woman to define her feelings in language chiefly made by men, or in YAML chiefly maintained by Gabriel Oak.”
-  slug: far-from-the-madding-cloud
-  subtitle: Rural Infrastructure in an Age of Elastic Compute
-  teaser: |
-    Bathsheba Everdene attempts to run a scalable platform from a farm, despite intermittent connectivity and several unreliable men.
-  title: Far from the Madding Cloud
-  topic: Cloud Architecture
 - author: George Eliot
   blurb: |
     A deeply humane examination of monorepos, shared ownership, dependency boundaries, and the slow realisation that technical decisions are rarely separable from social ones.

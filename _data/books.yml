@@ -402,7 +402,7 @@
   - 'Chapter 2: Casaubon’s Unfinished Build System'
   - 'Chapter 3: Dorothea Proposes Shared Ownership'
   - 'Chapter 4: The Reform Bill of Continuous Integration'
-  live: false
+  live: true
   published: 2026-06-15
   pullquote: |
     “What do we live for, if not to make life less difficult for each other, and occasionally to fix the build?”

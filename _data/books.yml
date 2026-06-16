@@ -420,7 +420,7 @@
   - 'Chapter 2: Credentials in Plain Sight'
   - 'Chapter 3: Raveloe Discovers Key Rotation'
   - 'Chapter 4: Eppie and the Principle of Least Privilege'
-  live: false
+  live: true
   published: 2026-06-16
   pullquote: |
     “No secret should be left alone in a cottage without proper encryption.”

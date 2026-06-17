@@ -24,6 +24,9 @@ my @books = @{ LoadFile("_data/books.yml") || [] };
 my ($book) = grep { $_->{slug} eq $slug } @books;
 die "No book found for slug [$slug]\n" unless $book;
 
+my $cover = "assets/images/covers/$slug.png";
+die "Missing cover image: $cover\n" unless -f $cover;
+
 path("tmp")->mkpath;
 
 my $script;

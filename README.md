@@ -18,7 +18,9 @@ The site is a [Jekyll](https://jekyllrb.com/) static site deployed to
 [GitHub Pages](https://pages.github.com/). All book data lives in
 `_data/books.yml`. A new book is published automatically every day via a
 GitHub Actions workflow that flips the `live` flag on any book whose
-`published` date has arrived.
+`published` date has arrived. The same workflow then generates a short
+TikTok-style promotional video for the new book using `bin/mk_video`, and
+uploads it as a workflow artifact ready for download and posting.
 
 ## Running locally
 

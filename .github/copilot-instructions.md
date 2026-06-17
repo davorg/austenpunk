@@ -100,8 +100,15 @@ To publish immediately, add the entry directly to `_data/books.yml` with
   - Reads `_data/books.yml`.
   - Flips `live` to `true` for books whose `published` date is today or earlier.
   - Writes the updated file back.
+  - Prints the slug of each newly-published book to stdout.
 - Commits and pushes the updated YAML file.
 - Triggers the pages build workflow if any books were published.
+- Installs `ffmpeg` and runs `perl bin/mk_video <slug>` for each newly-published book.
+- Uploads the contents of `tmp/` (`.txt`, `.mp3`, `.mp4` files) as a GitHub Actions
+  artifact named `videos` for download and posting to social media.
+- Video generation requires three repository secrets: `OPENAI_API_KEY`,
+  `ELEVENLABS_API_KEY`, and `ELEVENLABS_VOICE_ID`. If any are absent the video
+  steps are skipped gracefully without failing the workflow.
 
 ### Site deployment (`.github/workflows/pages.yml`)
 - Triggers on push to `main` or via `workflow_dispatch`.
@@ -125,15 +132,19 @@ and visually inspecting it.
 
 ## Video Generation (`bin/mk_video`)
 
-A Perl script that creates TikTok-style promotional MP4 videos. It is **not** part of the
-automated CI/CD pipeline — it is run manually by the site owner.
+A Perl script that creates TikTok-style promotional MP4 videos. It is run automatically
+as part of the daily publish workflow, and can also be run manually by the site owner.
 
-**Dependencies (must be installed locally):**
+**Dependencies:**
 - Perl with modules: `JSON::PP`, `YAML::XS`, `HTTP::Tiny`, `Path::Tiny`, `DateTime`
 - `ffmpeg` and `ffprobe` in PATH
 - Environment variables: `OPENAI_API_KEY`, `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`
 
-**Usage:**
+**In the automated workflow**, these are provided via repository secrets
+(`OPENAI_API_KEY`, `ELEVENLABS_API_KEY`, `ELEVENLABS_VOICE_ID`). All three must be set
+for video generation to run; if any are missing the step is skipped without error.
+
+**Usage (manual):**
 ```bash
 perl bin/mk_video <book-slug>
 ```

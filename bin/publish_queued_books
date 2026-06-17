@@ -13,11 +13,16 @@ my $today = DateTime->today->ymd;
 
 my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
 
+my @published;
+
 for my $book (@$books) {
     next if $book->{live};
     next unless "$book->{published}" le $today;
 
     $book->{live} = JSON::PP::true;
+    push @published, $book->{slug};
 }
 
 DumpFile( $books_path, $books );
+
+say $_ for @published;

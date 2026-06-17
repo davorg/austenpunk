@@ -438,7 +438,7 @@
   - 'Chapter 2: Mr Hyde Enables Production'
   - 'Chapter 3: Experiments Conducted After Midnight'
   - 'Chapter 4: Rollback Comes Too Late'
-  live: false
+  live: true
   published: 2026-06-17
   pullquote: |
     “Man is not truly one, but truly two; likewise, every feature has at least two deployment states.”

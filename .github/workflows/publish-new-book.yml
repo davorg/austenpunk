@@ -23,7 +23,11 @@ jobs:
       - name: Install Perl dependencies
         run: cpanm --notest --installdeps .
 
-      - run: perl bin/publish_queued_books
+      - name: Publish queued books
+        id: publish
+        run: |
+          SLUGS=$(perl bin/publish_queued_books | xargs echo)
+          echo "slugs=$SLUGS" >> "$GITHUB_OUTPUT"
 
       - name: Commit changes
         id: commit
@@ -46,3 +50,32 @@ jobs:
         run: gh workflow run pages.yml
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Install ffmpeg
+        if: steps.commit.outputs.changed == 'true'
+        run: sudo apt-get install -y ffmpeg
+
+      - name: Generate videos
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          PUBLISHED_SLUGS: ${{ steps.publish.outputs.slugs }}
+        run: |
+          if [ -z "$OPENAI_API_KEY" ] || [ -z "$ELEVENLABS_API_KEY" ] || [ -z "$ELEVENLABS_VOICE_ID" ]; then
+            echo "Skipping video generation: API secrets not configured"
+            exit 0
+          fi
+          for slug in $PUBLISHED_SLUGS; do
+            echo "Generating video for: $slug"
+            perl bin/mk_video "$slug"
+          done
+
+      - name: Upload video artifacts
+        if: steps.commit.outputs.changed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos
+          path: tmp/
+          if-no-files-found: ignore

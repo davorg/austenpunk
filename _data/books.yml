@@ -456,7 +456,7 @@
   - 'Chapter 2: Long John Silver Pins a Version'
   - 'Chapter 3: Mutiny in the Package Registry'
   - 'Chapter 4: The Treasure Was Reproducible Builds'
-  live: false
+  live: true
   published: 2026-06-18
   pullquote: |
     “Fifteen men on a dead man’s branch; yo-ho-ho and a vulnerable dependency.”

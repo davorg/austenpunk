@@ -474,7 +474,7 @@
   - 'Chapter 2: The Curious Incident of the Test That Did Not Run'
   - 'Chapter 3: Watson Adds Logging'
   - 'Chapter 4: The Semicolon at Baker Street'
-  live: false
+  live: true
   published: 2026-06-19
   pullquote: |
     “When you have eliminated the impossible, whatever remains is probably a missing semicolon.”

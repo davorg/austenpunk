@@ -72,10 +72,15 @@ jobs:
             perl bin/mk_video "$slug"
           done
 
+      - name: Set video artifact name
+        id: artifact
+        if: steps.commit.outputs.changed == 'true'
+        run: echo "name=video-$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
       - name: Upload video artifacts
         if: steps.commit.outputs.changed == 'true'
         uses: actions/upload-artifact@v7
         with:
-          name: videos
+          name: ${{ steps.artifact.outputs.name }}
           path: tmp/
           if-no-files-found: ignore

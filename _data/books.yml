@@ -492,7 +492,7 @@
   - 'Chapter 2: Sir Henry Ignores the Runbook'
   - 'Chapter 3: Holmes Correlates the Metrics'
   - 'Chapter 4: A Blameless Postmortem at Baskerville Hall'
-  live: false
+  live: true
   published: 2026-06-20
   pullquote: |
     “The world is full of obvious things which nobody by any chance ever observes until PagerDuty rings.”

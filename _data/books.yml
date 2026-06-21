@@ -510,7 +510,7 @@
   - 'Chapter 2: A Creature of Many Services'
   - 'Chapter 3: The Platform Demands Documentation'
   - 'Chapter 4: Victor Refuses the Support Rotation'
-  live: false
+  live: true
   published: 2026-06-21
   pullquote: |
     “It lives; unfortunately, it also requires long-term support.”

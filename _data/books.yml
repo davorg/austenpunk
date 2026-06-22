@@ -528,7 +528,7 @@
   - 'Chapter 2: Jonathan Harker Reviews the Permissions'
   - 'Chapter 3: Mina Implements Least Privilege'
   - 'Chapter 4: Revoking the Count’s Credentials'
-  live: false
+  live: true
   published: 2026-06-22
   pullquote: |
     “The old systems had many doors, and most of them were unfortunately open.”

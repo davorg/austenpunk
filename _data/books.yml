@@ -578,6 +578,7 @@
   live: false
   publish_on: 2026-06-25
   title: Howards End-to-End Testing
+  slug: howards-end-to-end-testing
   subtitle: Only Connect Your Test Environments
   topic: Testing
   teaser: |
@@ -596,6 +597,7 @@
   live: false
   publish_on: 2026-06-26
   title: The Picture of Dorian Graylog
+  slug: the-picture-of-dorian-graylog
   subtitle: Observability Without Consequences
   topic: Observability
   teaser: |
@@ -614,6 +616,7 @@
   live: false
   publish_on: 2026-06-27
   title: The Time Machine Learning Handbook
+  slug: the-time-machine-learning-handbook
   subtitle: Predicting the Future with Historical Data
   topic: Machine Learning
   teaser: |
@@ -632,6 +635,7 @@
   live: false
   publish_on: 2026-06-28
   title: Great Expectations Management
+  slug: great-expectations-management
   subtitle: Stakeholders, Roadmaps, and Other Fictions
   topic: Product Management
   teaser: |
@@ -650,6 +654,7 @@
   live: false
   publish_on: 2026-06-29
   title: Jude the Obscure Legacy System
+  slug: jude-the-obscure-legacy-system
   subtitle: Maintaining Software Nobody Fully Understands
   topic: Legacy Systems
   teaser: |
@@ -668,6 +673,7 @@
   live: false
   publish_on: 2026-06-30
   title: The Sign of Four Oh Four
+  slug: the-sign-of-four-oh-four
   subtitle: Missing Resources and Elementary Diagnostics
   topic: Web Development
   teaser: |
@@ -686,6 +692,7 @@
   live: false
   publish_on: 2026-07-01
   title: Persuasion and Change Management
+  slug: persuasion-and-change-management
   subtitle: Influencing Stakeholders with Civility
   topic: Change Management
   teaser: |

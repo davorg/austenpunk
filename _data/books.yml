@@ -546,7 +546,7 @@
   - 'Chapter 2: Scheduling on the River'
   - 'Chapter 3: Montmorency Disrupts the Cluster'
   - 'Chapter 4: A Surprisingly Pleasant Rollout to Oxford'
-  live: false
+  live: true
   published: 2026-06-23
   pullquote: |
     “We agreed that the cluster needed discipline, though none of us wished to provide it.”

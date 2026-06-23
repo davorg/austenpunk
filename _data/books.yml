@@ -574,3 +574,128 @@
     Lucy Honeychurch discovers that perspective matters, especially when inspecting someone else’s HTML.
   title: A Room with a View Source
   topic: Front-End Development
+- author: E. M. Forster
+  live: false
+  publish_on: 2026-06-25
+  title: Howards End-to-End Testing
+  subtitle: Only Connect Your Test Environments
+  topic: Testing
+  teaser: |
+    Margaret Schlegel attempts to connect development, staging, and production while everyone else insists on treating them as separate concerns.
+  blurb: |
+    A thoughtful examination of integration testing, test environments, deployment confidence, and the enduring wisdom of ensuring that systems actually communicate with one another before release day.
+  pullquote: |
+    “Only connect the services.”
+  contents:
+    - 'Chapter 1: The Development Environment'
+    - 'Chapter 2: A Visit to Staging'
+    - 'Chapter 3: The Production Incident'
+    - 'Chapter 4: Only Connect'
+
+- author: Oscar Wilde
+  live: false
+  publish_on: 2026-06-26
+  title: The Picture of Dorian Graylog
+  subtitle: Observability Without Consequences
+  topic: Observability
+  teaser: |
+    Dorian's systems remain immaculate while the logs quietly accumulate evidence of every questionable decision.
+  blurb: |
+    A witty exploration of logging, audit trails, observability, and the mistaken belief that problems cease to exist merely because dashboards remain aesthetically pleasing.
+  pullquote: |
+    “The logs recorded everything; unfortunately, nobody was reading them.”
+  contents:
+    - 'Chapter 1: The Beautiful Dashboard'
+    - 'Chapter 2: Basil Reviews the Logs'
+    - 'Chapter 3: Lord Henry Disables Alerts'
+    - 'Chapter 4: The Audit Trail Revealed'
+
+- author: H. G. Wells
+  live: false
+  publish_on: 2026-06-27
+  title: The Time Machine Learning Handbook
+  subtitle: Predicting the Future with Historical Data
+  topic: Machine Learning
+  teaser: |
+    A Victorian inventor discovers that forecasting becomes much easier once one has accidentally visited the future.
+  blurb: |
+    A practical guide to predictive models, training data, overfitting, and the ethical complications that arise when your benchmark results are obtained tomorrow.
+  pullquote: |
+    “The model performed exceptionally well on next year's data.”
+  contents:
+    - 'Chapter 1: The Training Set'
+    - 'Chapter 2: A Journey to Validation'
+    - 'Chapter 3: The Eloi Benchmark'
+    - 'Chapter 4: Temporal Data Leakage'
+
+- author: Charles Dickens
+  live: false
+  publish_on: 2026-06-28
+  title: Great Expectations Management
+  subtitle: Stakeholders, Roadmaps, and Other Fictions
+  topic: Product Management
+  teaser: |
+    Pip learns that managing stakeholder expectations is considerably harder than becoming a gentleman.
+  blurb: |
+    An account of product roadmaps, delivery promises, scope negotiation, and the painful discovery that every feature request creates three additional meetings.
+  pullquote: |
+    “Take nothing on its looks; take everything on its requirements.”
+  contents:
+    - 'Chapter 1: The Product Vision'
+    - 'Chapter 2: Miss Havisham Reviews the Roadmap'
+    - 'Chapter 3: Estella Rejects the MVP'
+    - 'Chapter 4: Managing Expectations'
+
+- author: Thomas Hardy
+  live: false
+  publish_on: 2026-06-29
+  title: Jude the Obscure Legacy System
+  subtitle: Maintaining Software Nobody Fully Understands
+  topic: Legacy Systems
+  teaser: |
+    Jude attempts to understand an ageing codebase whose original authors are long gone and whose documentation never truly existed.
+  blurb: |
+    A melancholy study of technical debt, institutional knowledge, maintenance burdens, and the human cost of undocumented architectural decisions.
+  pullquote: |
+    “The code was difficult; the comments were impossible.”
+  contents:
+    - 'Chapter 1: The Ancient Repository'
+    - 'Chapter 2: Forgotten Requirements'
+    - 'Chapter 3: Refactoring at Christminster'
+    - 'Chapter 4: The Last Maintainer'
+
+- author: Arthur Conan Doyle
+  live: false
+  publish_on: 2026-06-30
+  title: The Sign of Four Oh Four
+  subtitle: Missing Resources and Elementary Diagnostics
+  topic: Web Development
+  teaser: |
+    Holmes investigates a mysterious disappearance involving a web page that everyone insists existed yesterday.
+  blurb: |
+    A detective story concerning broken links, missing resources, web servers, and the remarkable frequency with which developers forget to deploy static assets.
+  pullquote: |
+    “The page has vanished, Watson. Check the routing table.”
+  contents:
+    - 'Chapter 1: A Missing Resource'
+    - 'Chapter 2: The Curious Redirect'
+    - 'Chapter 3: Watson Clears the Cache'
+    - 'Chapter 4: The Sign of Four Oh Four'
+
+- author: Jane Austen
+  live: false
+  publish_on: 2026-07-01
+  title: Persuasion and Change Management
+  subtitle: Influencing Stakeholders with Civility
+  topic: Change Management
+  teaser: |
+    Anne Elliot discovers that successful organisational change depends less on authority than on patient persuasion.
+  blurb: |
+    A civilised guide to organisational change, stakeholder engagement, communication plans, and introducing new processes without triggering a rebellion.
+  pullquote: |
+    “One does not force adoption; one persuades it.”
+  contents:
+    - 'Chapter 1: The Proposed Change'
+    - 'Chapter 2: Stakeholders Object'
+    - 'Chapter 3: Anne Builds Consensus'
+    - 'Chapter 4: The Successful Rollout'

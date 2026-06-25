@@ -582,7 +582,7 @@
   - 'Chapter 2: A Visit to Staging'
   - 'Chapter 3: The Production Incident'
   - 'Chapter 4: Only Connect'
-  live: false
+  live: true
   published: 2026-06-25
   pullquote: |
     “Only connect the services.”

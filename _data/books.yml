@@ -600,7 +600,7 @@
   - 'Chapter 2: Basil Reviews the Logs'
   - 'Chapter 3: Lord Henry Disables Alerts'
   - 'Chapter 4: The Audit Trail Revealed'
-  live: false
+  live: true
   published: 2026-06-26
   pullquote: |
     “The logs recorded everything; unfortunately, nobody was reading them.”

@@ -618,7 +618,7 @@
   - 'Chapter 2: A Journey to Validation'
   - 'Chapter 3: The Eloi Benchmark'
   - 'Chapter 4: Temporal Data Leakage'
-  live: false
+  live: true
   published: 2026-06-27
   pullquote: |
     “The model performed exceptionally well on next year's data.”

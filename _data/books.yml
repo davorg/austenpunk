@@ -636,7 +636,7 @@
   - 'Chapter 2: Miss Havisham Reviews the Roadmap'
   - 'Chapter 3: Estella Rejects the MVP'
   - 'Chapter 4: Managing Expectations'
-  live: false
+  live: true
   published: 2026-06-28
   pullquote: |
     “Take nothing on its looks; take everything on its requirements.”

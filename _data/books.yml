@@ -654,7 +654,7 @@
   - 'Chapter 2: Forgotten Requirements'
   - 'Chapter 3: Refactoring at Christminster'
   - 'Chapter 4: The Last Maintainer'
-  live: false
+  live: true
   published: 2026-06-29
   pullquote: |
     “The code was difficult; the comments were impossible.”

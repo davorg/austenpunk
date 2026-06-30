@@ -672,7 +672,7 @@
   - 'Chapter 2: The Curious Redirect'
   - 'Chapter 3: Watson Clears the Cache'
   - 'Chapter 4: The Sign of Four Oh Four'
-  live: false
+  live: true
   published: 2026-06-30
   pullquote: |
     “The page has vanished, Watson. Check the routing table.”

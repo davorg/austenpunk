@@ -1,0 +1,221 @@
+#!/usr/bin/env perl
+
+use v5.40;
+use utf8;
+use JSON::PP qw(decode_json encode_json);
+use HTTP::Tiny;
+use MIME::Base64 qw(decode_base64);
+use Path::Tiny qw(path);
+
+binmode STDOUT, ':encoding(UTF-8)';
+binmode STDERR, ':encoding(UTF-8)';
+
+my $model       = $ENV{OPENAI_IMAGE_MODEL} // 'gpt-image-2';
+my $quality     = $ENV{OPENAI_IMAGE_QUALITY} // 'high';
+my $size        = $ENV{OPENAI_IMAGE_SIZE} // '1024x1536';
+my $style_path  = path('docs/STYLE_GUIDE.md');
+my $dry_run     = 0;
+my $force       = 0;
+my @wanted_slug;
+
+for my $arg (@ARGV) {
+  if ( $arg eq '--dry-run' ) {
+    $dry_run = 1;
+    next;
+  }
+
+  if ( $arg eq '--force' ) {
+    $force = 1;
+    next;
+  }
+
+  if ( $arg eq '--help' || $arg eq '-h' ) {
+    usage();
+  }
+
+  if ( $arg =~ /\A-/ ) {
+    die "Unknown option: $arg\n";
+  }
+
+  push @wanted_slug, $arg;
+}
+
+my $openai_key = $ENV{OPENAI_API_KEY};
+die "Set OPENAI_API_KEY\n" if !$dry_run && !$openai_key;
+
+die "Missing style guide: $style_path\n" unless -f $style_path;
+
+my $style_guide = $style_path->slurp_utf8;
+my @books       = upcoming_books();
+my %wanted      = map { $_ => 1 } @wanted_slug;
+
+@books = grep { $wanted{ $_->{slug} } } @books if @wanted_slug;
+
+if (@wanted_slug) {
+  my %found = map { $_->{slug} => 1 } @books;
+  my @missing = grep { !$found{$_} } @wanted_slug;
+  die "No queued book found for slug(s): @missing\n" if @missing;
+}
+
+my @targets = grep { $force || $_->{missing_cover} } @books;
+
+if ( !@targets ) {
+  say @wanted_slug
+    ? "No matching queued books need covers"
+    : "No queued books need covers";
+  exit 0;
+}
+
+for my $book (@targets) {
+  my $cover = path( $book->{cover} );
+
+  if ( -e $cover && !$force ) {
+    say "Skipping $book->{slug}: cover already exists";
+    next;
+  }
+
+  my $prompt = cover_prompt( $book, $style_guide );
+
+  if ($dry_run) {
+    say "--- $book->{slug} ---";
+    say $prompt;
+    next;
+  }
+
+  $cover->parent->mkpath;
+
+  my $png = generate_cover($prompt);
+  $cover->spew_raw($png);
+
+  say "Wrote $cover";
+}
+
+sub usage () {
+  print <<"USAGE";
+Usage: $0 [--dry-run] [--force] [slug ...]
+
+Generate missing cover images for queued Austenpunk books.
+
+Options:
+  --dry-run  Print prompts without calling the OpenAI API
+  --force    Regenerate covers even when files already exist
+
+Environment:
+  OPENAI_API_KEY          Required unless --dry-run is used
+  OPENAI_IMAGE_MODEL      Defaults to gpt-image-2
+  OPENAI_IMAGE_QUALITY    Defaults to high
+  OPENAI_IMAGE_SIZE       Defaults to 1024x1536
+USAGE
+  exit 0;
+}
+
+sub upcoming_books () {
+  open my $fh, '-|', $^X, 'bin/check_upcoming', '--json'
+    or die "Could not run bin/check_upcoming --json: $!\n";
+
+  local $/;
+  my $json = <$fh>;
+
+  close $fh
+    or die "bin/check_upcoming --json failed\n";
+
+  my $books = decode_json($json);
+
+  die "bin/check_upcoming --json did not return an array\n"
+    unless ref $books eq 'ARRAY';
+
+  return @$books;
+}
+
+sub cover_prompt ( $book, $style_guide ) {
+  my $contents = join "\n", map { "- $_" } $book->{contents}->@*;
+
+  return <<"PROMPT";
+Create one complete portrait book cover image for Austenpunk Publishing.
+
+Use this project style guide as binding direction:
+
+$style_guide
+
+Book data to render on the cover:
+Title: $book->{title}
+Subtitle: $book->{subtitle}
+Author: $book->{author}
+Topic: $book->{topic}
+Publication date: $book->{published}
+
+Teaser:
+$book->{teaser}
+
+Blurb:
+$book->{blurb}
+
+Pullquote:
+$book->{pullquote}
+
+Contents panel:
+$contents
+
+Hard requirements:
+- Portrait 2:3 book cover, suitable for saving as $size.
+- Preserve this exact title text: "$book->{title}".
+- Preserve this exact subtitle text: "$book->{subtitle}".
+- Preserve this exact author text: "$book->{author}".
+- Include a publisher plaque reading exactly "AUSTENPUNK PUBLISHING".
+- Make the cover look like a plausible late-Victorian technical handbook.
+- Warm cream parchment background, sepia engraved linework, ornate border.
+- Central image should be 70% literary scene and 30% software-engineering metaphor.
+- Include a small contents panel and a quotation panel if the layout can support them cleanly.
+- Avoid modern laptops, phones, UI screenshots, neon cyberpunk, glossy stock-art lighting, black horror-poster backgrounds, and fake extra titles.
+- Prioritise correct text, readable typography, and consistency with the Austenpunk catalogue.
+PROMPT
+}
+
+sub generate_cover ($prompt) {
+  my $http     = HTTP::Tiny->new( timeout => 300 );
+  my $attempts = 4;
+  my $res;
+
+  for my $try ( 1 .. $attempts ) {
+    $res = $http->post(
+      'https://api.openai.com/v1/images/generations',
+      {
+        headers => {
+          Authorization  => "Bearer $openai_key",
+          'Content-Type' => 'application/json',
+        },
+        content => encode_json({
+          model   => $model,
+          prompt  => $prompt,
+          n       => 1,
+          quality => $quality,
+          size    => $size,
+        }),
+      },
+    );
+
+    last if $res->{success};
+    last unless is_retryable_status( $res->{status} );
+
+    my $delay = 5 * $try;
+    warn "OpenAI image request failed with $res->{status} $res->{reason}; retrying in ${delay}s ($try/$attempts)\n";
+    sleep $delay;
+  }
+
+  die "OpenAI image error: $res->{status} $res->{reason}\n$res->{content}\n"
+    unless $res->{success};
+
+  my $data = decode_json( $res->{content} );
+  my $b64  = $data->{data}[0]{b64_json};
+
+  die "OpenAI image response did not include data[0].b64_json\n"
+    unless defined $b64 && length $b64;
+
+  return decode_base64($b64);
+}
+
+sub is_retryable_status ($status) {
+  return 1 if $status == 429;
+  return 1 if $status >= 500 && $status <= 599;
+  return 0;
+}

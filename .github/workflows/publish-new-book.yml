@@ -23,6 +23,19 @@ jobs:
       - name: Install Perl dependencies
         run: cpanm --notest --installdeps .
 
+      - name: Extend book queue
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "Skipping queue extension: OPENAI_API_KEY is not configured"
+            exit 0
+          fi
+
+          perl bin/extend_queue || {
+            echo "::warning::Queue extension failed"
+          }
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
       - name: Publish queued books
         id: publish
         run: |
@@ -41,7 +54,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add _data/books.yml
-          git commit -m "Publish queued Austenpunk books"
+          git commit -m "Update queued Austenpunk books"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
@@ -52,11 +65,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Install ffmpeg
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.publish.outputs.slugs != ''
         run: sudo apt-get install -y ffmpeg
 
       - name: Generate videos
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.publish.outputs.slugs != ''
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
@@ -74,11 +87,11 @@ jobs:
 
       - name: Set video artifact name
         id: artifact
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.publish.outputs.slugs != ''
         run: echo "name=video-$(date -u +%F)" >> "$GITHUB_OUTPUT"
 
       - name: Upload video artifacts
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.publish.outputs.slugs != ''
         uses: actions/upload-artifact@v7
         with:
           name: ${{ steps.artifact.outputs.name }}

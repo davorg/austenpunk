@@ -700,3 +700,99 @@
     Anne Elliot discovers that successful organisational change depends less on authority than on patient persuasion.
   title: Persuasion and Change Management
   topic: Change Management
+- author: Wilkie Collins
+  blurb: Wilkie Collins brings the country-house mystery to credential hygiene, showing
+    how to classify secrets, restrict access, rotate keys, and audit usage without
+    relying on the moral fibre of junior developers. A calm guide to vaults, scopes,
+    leases, and the awkward interview after a production token appears in a public
+    repository.
+  contents:
+  - The Diamond in the Environment
+  - Custody Chains and Commit Histories
+  - Rotating the Unmentionable Key
+  - A Sergeant Cuff for Your Audit Logs
+  live: false
+  published: 2026-07-02
+  pullquote: No secret is truly lost; it is merely waiting in somebody's shell history.
+  slug: the-moonstone-and-secrets-management
+  subtitle: A sensation novel of rotation, custody, and the regrettable habit of pasting
+    tokens into Slack
+  teaser: A diamond vanishes, an environment variable is exposed, and everyone insists
+    their laptop is not implicated.
+  title: The Moonstone and Secrets Management
+  topic: Secrets Management
+- author: Herman Melville
+  blurb: Herman Melville charts the long voyage from prudent refactoring to catastrophic
+    rewrite fever. This volume distinguishes useful debt from barnacled architecture,
+    explains how to price risk, and warns against captains who mistake a quarterly
+    planning session for destiny.
+  contents:
+  - Loomings in the Backlog
+  - The Pequod's Dependency Graph
+  - Harpoons, Hotfixes, and Hubris
+  - When Not to Rewrite the Whale
+  live: false
+  published: 2026-07-03
+  pullquote: Call me Ishmael; I once estimated the migration at three sprints.
+  slug: moby-dick-and-the-white-whale-of-technical-debt
+  subtitle: Or, the monomaniacal pursuit of the rewrite
+  teaser: One captain, one backlog, and a harpoon aimed squarely at the billing service.
+  title: Moby-Dick and the White Whale of Technical Debt
+  topic: Technical Debt
+- author: Louisa May Alcott
+  blurb: Louisa May Alcott introduces generative AI through the practical concerns
+    of prompt design, evaluation, retrieval, safety, and cost control. Sentimental
+    only about reproducible benchmarks, it is a family story in which every sister
+    learns that a pleasing answer is not the same as a correct one.
+  contents:
+  - Meg Governs the Prompt Library
+  - Jo Fine-Tunes Against Advice
+  - Beth Evaluates Quietly
+  - Amy Optimises the Demo Budget
+  live: false
+  published: 2026-07-04
+  pullquote: The model was very accomplished, but inclined to invent aunts.
+  slug: little-women-and-large-language-models
+  subtitle: Fine-tuning domestic expectations in four modest notebooks
+  teaser: Meg wants governance, Jo wants a bigger context window, Beth wants the model
+    to stop hallucinating, and Amy has already renamed the demo.
+  title: Little Women and Large Language Models
+  topic: Generative AI
+- author: Jack London
+  blurb: Jack London tells a bracing tale of certificate lifecycles, renewal automation,
+    trust chains, and the particular shame of discovering an unmanaged wildcard in
+    front of customers. It favours ACME, inventory, and short-lived credentials over
+    heroic calendar reminders.
+  contents:
+  - Into the Trust Store
+  - The Law of Common Names
+  - Renewal by Fang and Cron
+  - Revocation in the Snow
+  live: false
+  published: 2026-07-05
+  pullquote: The pack survives because somebody automated renewal.
+  slug: the-call-of-the-wildcard-certificate
+  subtitle: TLS administration for teams who have heard something howling in production
+  teaser: A noble certificate leaves the data centre, joins the wilderness of subdomains,
+    and expires at 02:17.
+  title: The Call of the Wildcard Certificate
+  topic: TLS Certificates
+- author: Elizabeth Gaskell
+  blurb: Elizabeth Gaskell applies village prudence to traffic forecasts, load testing,
+    headroom, queuing behaviour, and the delicate matter of telling stakeholders that
+    optimism is not a scaling strategy. A restrained manual for ensuring the platform
+    can receive company without borrowing CPU from the neighbours.
+  contents:
+  - A Modest Estimate of Visitors
+  - Tea, Queues, and Throughput
+  - The Replica in the Parlour
+  - Headroom Without Vulgar Display
+  live: false
+  published: 2026-07-06
+  pullquote: There is no impropriety in overprovisioning when guests are expected.
+  slug: cranford-and-capacity-planning
+  subtitle: Polite forecasts for systems that must not faint when visitors arrive
+  teaser: The ladies of Cranford know that one must always keep spare tea, spare chairs,
+    and spare read replicas.
+  title: Cranford and Capacity Planning
+  topic: Capacity Planning

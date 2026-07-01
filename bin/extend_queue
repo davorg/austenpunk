@@ -1,0 +1,215 @@
+#!/usr/bin/env perl
+
+use v5.40;
+use utf8;
+use JSON::PP qw(decode_json encode_json);
+use YAML::XS qw(LoadFile DumpFile);
+use HTTP::Tiny;
+use DateTime;
+
+local $YAML::XS::Boolean = 'JSON::PP';
+
+my $books_path  = '_data/books.yml';
+my $queue_floor = 3;
+my $batch_size  = 5;
+
+my $openai_key;
+
+my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
+
+my @queued = grep { !$_->{live} } @$books;
+
+if ( @queued >= $queue_floor ) {
+  say "Queue already has " . @queued . " books";
+  exit 0;
+}
+
+$openai_key = $ENV{OPENAI_API_KEY}
+  or die "Set OPENAI_API_KEY\n";
+
+my @generated = generate_books($books);
+validate_books( $books, \@generated );
+date_books( $books, \@generated );
+
+push @$books, @generated;
+
+DumpFile( $books_path, $books );
+
+say "Added $_->{slug}" for @generated;
+
+sub generate_books ($books) {
+  my $existing = join "\n",
+    map { "- $_->{title} [$_->{slug}] by $_->{author}; topic: $_->{topic}" }
+    @$books;
+
+  my $prompt = <<"PROMPT";
+You are extending the publication queue for Austenpunk Publishing.
+
+Austenpunk is a satirical catalogue of fake technical books whose titles parody
+classic literature and apply it to modern software engineering.
+
+Generate exactly $batch_size new book records.
+
+Return only a JSON array. Do not wrap it in markdown. Do not include comments.
+
+Each object must contain these string fields:
+- title
+- subtitle
+- author
+- topic
+- teaser
+- blurb
+- pullquote
+- slug
+
+Each object must also contain a contents array of exactly four chapter titles.
+
+Rules:
+- Do not reuse an existing title, slug, or close variation.
+- Prefer nineteenth-century and early twentieth-century public-domain literary
+  sources, but avoid authors already overused in the existing catalogue where
+  possible.
+- Keep the tone deadpan, literary, technically accurate, and funny without
+  becoming wacky.
+- Use British English spelling.
+- Make slug lower-case ASCII words separated by hyphens.
+- Do not include live or published fields; the script will add those.
+
+Existing books:
+$existing
+PROMPT
+
+  my $http = HTTP::Tiny->new;
+
+  my $res = $http->post(
+    "https://api.openai.com/v1/responses",
+    {
+      headers => {
+        Authorization  => "Bearer $openai_key",
+        "Content-Type" => "application/json",
+      },
+      content => encode_json({
+        model => "gpt-5.5",
+        input => $prompt,
+      }),
+    },
+  );
+
+  die "OpenAI error: $res->{status} $res->{reason}\n$res->{content}\n"
+    unless $res->{success};
+
+  my $data = decode_json( $res->{content} );
+  my $text = extract_output_text($data);
+  my $json = extract_json_array($text);
+  my $new_books = decode_json($json);
+
+  die "OpenAI response was not an array\n" unless ref $new_books eq 'ARRAY';
+  die "Expected $batch_size books, got " . @$new_books . "\n"
+    unless @$new_books == $batch_size;
+
+  return @$new_books;
+}
+
+sub extract_output_text ($data) {
+  for my $output ( $data->{output}->@* ) {
+    next unless $output->{type} eq 'message';
+
+    for my $content ( $output->{content}->@* ) {
+      next unless $content->{type} eq 'output_text';
+
+      return $content->{text};
+    }
+  }
+
+  die "No output_text found in OpenAI response\n";
+}
+
+sub extract_json_array ($text) {
+  my $start = index $text, '[';
+  my $end   = rindex $text, ']';
+
+  die "No JSON array found in OpenAI response\n"
+    if $start < 0 || $end < $start;
+
+  return substr $text, $start, $end - $start + 1;
+}
+
+sub validate_books ( $existing, $generated ) {
+  my %seen_slug  = map { $_->{slug}  => 1 } @$existing;
+  my %seen_title = map { $_->{title} => 1 } @$existing;
+
+  my @required = qw(
+    author
+    blurb
+    contents
+    pullquote
+    slug
+    subtitle
+    teaser
+    title
+    topic
+  );
+
+  for my $book (@$generated) {
+    die "Generated book is not an object\n" unless ref $book eq 'HASH';
+
+    for my $field (@required) {
+      die "Generated book is missing [$field]\n"
+        unless exists $book->{$field};
+    }
+
+    die "Duplicate generated slug [$book->{slug}]\n"
+      if $seen_slug{ $book->{slug} }++;
+
+    die "Duplicate generated title [$book->{title}]\n"
+      if $seen_title{ $book->{title} }++;
+
+    die "Invalid slug [$book->{slug}]\n"
+      unless $book->{slug} =~ /\A[a-z0-9]+(?:-[a-z0-9]+)*\z/;
+
+    die "Contents for [$book->{slug}] must be an array\n"
+      unless ref $book->{contents} eq 'ARRAY';
+
+    die "Contents for [$book->{slug}] must have four chapters\n"
+      unless $book->{contents}->@* == 4;
+
+    for my $field ( grep { $_ ne 'contents' } @required ) {
+      die "Field [$field] for [$book->{slug}] must be a non-empty string\n"
+        unless !ref $book->{$field} && $book->{$field} =~ /\S/;
+    }
+
+    for my $chapter ( $book->{contents}->@* ) {
+      die "Chapter for [$book->{slug}] must be a non-empty string\n"
+        unless !ref $chapter && $chapter =~ /\S/;
+    }
+  }
+}
+
+sub date_books ( $existing, $generated ) {
+  my $latest = latest_published_date($existing);
+
+  for my $book (@$generated) {
+    $latest->add( days => 1 );
+    $book->{published} = $latest->ymd;
+    $book->{live}      = JSON::PP::false;
+  }
+}
+
+sub latest_published_date ($books) {
+  my $latest;
+
+  for my $book (@$books) {
+    next unless defined $book->{published};
+    next unless $book->{published} =~ /\A(\d{4})-(\d{2})-(\d{2})\z/;
+
+    my $date = DateTime->new(
+      year  => $1,
+      month => $2,
+      day   => $3,
+    );
+
+    $latest = $date if !defined $latest || DateTime->compare( $date, $latest ) > 0;
+  }
+
+  return $latest // DateTime->today;
+}

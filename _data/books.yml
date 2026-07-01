@@ -690,7 +690,7 @@
   - 'Chapter 2: Stakeholders Object'
   - 'Chapter 3: Anne Builds Consensus'
   - 'Chapter 4: The Successful Rollout'
-  live: false
+  live: true
   published: 2026-07-01
   pullquote: |
     “One does not force adoption; one persuades it.”

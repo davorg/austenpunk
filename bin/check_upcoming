@@ -1,23 +1,62 @@
 #!/usr/bin/env perl
 
 use v5.40;
-use YAML::XS  qw(LoadFile);
+use JSON::PP   qw();
+use YAML::XS   qw(LoadFile);
 use Path::Tiny qw(path);
 
 binmode STDOUT, ':encoding(UTF-8)';
+
+my $json = 0;
+
+for my $arg (@ARGV) {
+    if ( $arg eq '--json' ) {
+        $json = 1;
+        next;
+    }
+
+    die "Usage: $0 [--json]\n";
+}
 
 my $books_path = '_data/books.yml';
 my $covers_dir = path('assets/images/covers');
 
 my $books = -f $books_path ? ( LoadFile($books_path) // [] ) : [];
 
+my @upcoming;
+
 for my $book (@$books) {
     next if $book->{live};
 
-    my $cover = $covers_dir->child("$book->{slug}.png");
+    my $cover     = $covers_dir->child("$book->{slug}.png");
+    my $has_cover = -e $cover;
+
+    push @upcoming, {
+        author        => $book->{author},
+        blurb         => $book->{blurb},
+        contents      => $book->{contents} // [],
+        cover         => "$cover",
+        has_cover     => $has_cover ? JSON::PP::true : JSON::PP::false,
+        missing_cover => $has_cover ? JSON::PP::false : JSON::PP::true,
+        published     => "$book->{published}",
+        pullquote     => $book->{pullquote},
+        slug          => $book->{slug},
+        subtitle      => $book->{subtitle},
+        teaser        => $book->{teaser},
+        title         => $book->{title},
+        topic         => $book->{topic},
+    };
+}
+
+if ($json) {
+    say JSON::PP->new->canonical->encode(\@upcoming);
+    exit 0;
+}
+
+for my $book (@upcoming) {
     my $line = "$book->{published} $book->{title}";
 
-    $line .= " (missing cover: $cover)" unless -e $cover;
+    $line .= " (missing cover: $book->{cover})" if $book->{missing_cover};
 
     say $line;
 }

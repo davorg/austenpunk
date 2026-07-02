@@ -711,7 +711,7 @@
   - Custody Chains and Commit Histories
   - Rotating the Unmentionable Key
   - A Sergeant Cuff for Your Audit Logs
-  live: false
+  live: true
   published: 2026-07-02
   pullquote: No secret is truly lost; it is merely waiting in somebody's shell history.
   slug: the-moonstone-and-secrets-management

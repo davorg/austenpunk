@@ -18,6 +18,14 @@
     gtag('config', '{{ site.google_analytics }}');
   </script>
 {% endif %}
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -97,7 +105,19 @@
   </main>
 
   <footer class="site-footer">
-    <p><a href="/feed.xml">RSS feed</a></p>
+    <p class="social-links">
+      <a href="/feed.xml" title="RSS feed">
+        <i class="fa-solid fa-rss"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@austenpunk"
+         title="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+    </p>
+    <p>Follow Austenpunk on TikTok for a new nineteenth century software
+      engineering book every day.</p>
+    <hr>
     <p>Whilst Mr. Rochester remains unavailable for consulting engagements,
       <a href="https://davecross.co.uk/">Mr. Cross</a> continues to offer
       advice on continuous deployment, software architecture, and modern Perl

@@ -731,7 +731,7 @@
   - The Pequod's Dependency Graph
   - Harpoons, Hotfixes, and Hubris
   - When Not to Rewrite the Whale
-  live: false
+  live: true
   published: 2026-07-03
   pullquote: Call me Ishmael; I once estimated the migration at three sprints.
   slug: moby-dick-and-the-white-whale-of-technical-debt

@@ -768,7 +768,7 @@
   - The Law of Common Names
   - Renewal by Fang and Cron
   - Revocation in the Snow
-  live: false
+  live: true
   published: 2026-07-05
   pullquote: The pack survives because somebody automated renewal.
   slug: the-call-of-the-wildcard-certificate
@@ -796,3 +796,100 @@
     and spare read replicas.
   title: Cranford and Capacity Planning
   topic: Capacity Planning
+- author: Anthony Trollope
+  blurb: Trollope turns the cathedral close into a distributed system, where every
+    service has opinions, dependencies, and a regrettable number of intermediaries.
+    This volume explains traffic shaping, identity, retries, and observability with
+    the calm persistence of a committee that cannot quite adjourn.
+  contents:
+  - The Warden Receives a Packet
+  - Preferment, Proxies, and Policy Enforcement
+  - A Sermon on Retries and Circuit Breakers
+  - Mrs Proudie Inspects the Control Plane
+  live: false
+  published: 2026-07-07
+  pullquote: At last, a book that understands both mutual TLS and clerical resentment.
+  slug: barchester-towers-and-the-service-mesh
+  subtitle: Ecclesiastical routing, mutual TLS, and the quiet politics of east-west
+    traffic
+  teaser: A measured account of how requests move through a diocese of sidecars without
+    alarming the archdeacon.
+  title: Barchester Towers and the Service Mesh
+  topic: Service Mesh
+- author: Nathaniel Hawthorne
+  blurb: Hawthorne considers the modern organisation as a settlement founded on logs,
+    attestations, and uncomfortable questions from governance. With particular attention
+    to data retention, access trails, and evidence production, the book shows how
+    to make compliance less theatrical and more reproducible.
+  contents:
+  - The Marketplace of Audit Findings
+  - Custom Attributes and Public Consequences
+  - Retention Policies for Unforgiving Congregations
+  - Hester Prynne Designs an Evidence Pipeline
+  live: false
+  published: 2026-07-08
+  pullquote: Sin may be private, but your permissions model should not be.
+  slug: the-scarlet-letter-of-compliance
+  subtitle: Auditable systems, regulatory shame, and the durable record
+  teaser: A stern but practical guide to building systems that can explain themselves
+    before the magistrates.
+  title: The Scarlet Letter of Compliance
+  topic: Compliance Engineering
+- author: Joseph Conrad
+  blurb: Conrad follows a deployment from confident planning meeting to ambiguous
+    production reality. Along the way he distinguishes dark launches from feature
+    flags, explains blast-radius control, and asks why the most dangerous environment
+    is so often called staging.
+  contents:
+  - The Company Approves a Rollout
+  - Canaries in the Interior
+  - Shadow Traffic at the Inner Station
+  - Kurtz Has Altered the Release Plan
+  live: false
+  published: 2026-07-09
+  pullquote: The horror, the horror, the unbounded rollout percentage.
+  slug: heart-of-darkness-launches
+  subtitle: Progressive delivery, dark traffic, and the limits of managerial certainty
+  teaser: A voyage upriver through canaries, shadow reads, and the uneasy silence
+    of dashboards before a release.
+  title: Heart of Darkness Launches
+  topic: Release Engineering
+- author: Jules Verne
+  blurb: Verne provides an itinerary for systems that must operate across regions,
+    jurisdictions, and inconvenient oceans. The journey covers replication strategies,
+    failover design, data residency, and the melancholy fact that distance remains
+    undefeated by optimism.
+  contents:
+  - The Reform Club Latency Wager
+  - Replication by Rail, Steamer, and Fibre
+  - Passepartout Misconfigures a Region
+  - Crossing the International Date Line with Consistent Writes
+  live: false
+  published: 2026-07-10
+  pullquote: A circumnavigation of the globe in which every millisecond is accounted
+    for.
+  slug: around-the-world-in-eighty-data-centres
+  subtitle: Latency, resilience, and the civilised panic of global infrastructure
+  teaser: Phileas Fogg attempts active-active architecture with a pocket watch, a
+    ledger, and no tolerance for packet loss.
+  title: Around the World in Eighty Data Centres
+  topic: Global Infrastructure
+- author: Edith Wharton
+  blurb: Wharton maps the etiquette of analytical systems, where lineage, ownership,
+    and consent determine who may know what and when. This is a guide to catalogues,
+    quality checks, stewardship, and the subtle scandal of a spreadsheet with no provenance.
+  contents:
+  - Newland Archer Opens the Data Catalogue
+  - The Mingott Family Defines Ownership
+  - Lineage in a Room Full of Expectations
+  - Countess Olenska Requests Erasure
+  live: false
+  published: 2026-07-11
+  pullquote: No data is truly innocent once it has been invited into a dashboard.
+  slug: the-age-of-innocent-data
+  subtitle: Governance, lineage, and the social consequences of pretending columns
+    are harmless
+  teaser: A drawing-room examination of datasets that appear respectable until introduced
+    to context.
+  title: The Age of Innocent Data
+  topic: Data Governance

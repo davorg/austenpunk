@@ -787,7 +787,7 @@
   - Tea, Queues, and Throughput
   - The Replica in the Parlour
   - Headroom Without Vulgar Display
-  live: false
+  live: true
   published: 2026-07-06
   pullquote: There is no impropriety in overprovisioning when guests are expected.
   slug: cranford-and-capacity-planning

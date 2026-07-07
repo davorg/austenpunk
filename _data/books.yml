@@ -806,7 +806,7 @@
   - Preferment, Proxies, and Policy Enforcement
   - A Sermon on Retries and Circuit Breakers
   - Mrs Proudie Inspects the Control Plane
-  live: false
+  live: true
   published: 2026-07-07
   pullquote: At last, a book that understands both mutual TLS and clerical resentment.
   slug: barchester-towers-and-the-service-mesh

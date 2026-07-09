@@ -845,7 +845,7 @@
   - Canaries in the Interior
   - Shadow Traffic at the Inner Station
   - Kurtz Has Altered the Release Plan
-  live: false
+  live: true
   published: 2026-07-09
   pullquote: The horror, the horror, the unbounded rollout percentage.
   slug: heart-of-darkness-launches

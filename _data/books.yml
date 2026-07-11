@@ -883,7 +883,7 @@
   - The Mingott Family Defines Ownership
   - Lineage in a Room Full of Expectations
   - Countess Olenska Requests Erasure
-  live: false
+  live: true
   published: 2026-07-11
   pullquote: No data is truly innocent once it has been invited into a dashboard.
   slug: the-age-of-innocent-data
@@ -893,3 +893,102 @@
     to context.
   title: The Age of Innocent Data
   topic: Data Governance
+- author: Fyodor Dostoevsky
+  blurb: Dostoevsky turns from patricide to partition tolerance in this sombre guide
+    to keeping distributed systems honest when some participants are confused, malicious,
+    or merely Russian. With attention to quorum design, leader election, replicated
+    logs, and the melancholy dignity of a failed heartbeat, it shows how to reach
+    agreement without assuming anyone deserves to be believed.
+  contents:
+  - In Which Three Nodes Disagree Honourably
+  - Quorums, Replicas, and Other Family Matters
+  - The Grand Inquisitor's Guide to Leader Election
+  - Confession Logs and Deterministic Recovery
+  live: false
+  published: 2026-07-12
+  pullquote: A bracing reminder that a cluster may be innocent, but no individual
+    node should be trusted.
+  slug: the-brothers-karamazov-and-byzantine-fault-tolerance
+  subtitle: A family romance of replicas, quorums, and suspiciously persuasive nodes
+  teaser: When every service has a motive, consensus becomes a moral problem with
+    a timeout.
+  title: The Brothers Karamazov and Byzantine Fault Tolerance
+  topic: Distributed Consensus
+- author: William Makepeace Thackeray
+  blurb: Thackeray conducts the reader through the bustling fairground of asynchronous
+    architecture, where every message hopes for advancement and every consumer has
+    limited social capacity. Covering durable queues, retry policies, dead-letter
+    exchanges, ordering guarantees, and back pressure, this volume explains how to
+    keep work moving without allowing the entire establishment to collapse from enthusiasm.
+  contents:
+  - A Queue Without a Hero
+  - Dead Letters and Other Social Embarrassments
+  - The Proper Management of Retries
+  - Back Pressure at Lord Steyne's Dinner
+  live: false
+  published: 2026-07-13
+  pullquote: No queue is truly genteel until it has learned to refuse callers.
+  slug: vanity-fair-queues
+  subtitle: Polite society, back pressure, and the hazards of unbounded ambition
+  teaser: A novel of manners for systems that must wait their turn.
+  title: Vanity Fair Queues
+  topic: Message Queues
+- author: Henry James
+  blurb: 'In prose of exquisite uncertainty, Henry James examines the uneasy household
+    of modern configuration: environment variables, dynamic settings, secret rotation,
+    precedence rules, and the terrible ambiguity of defaults. This is a practical
+    manual for engineers who would like production to be configurable, but not possessed.'
+  contents:
+  - The Governess Discovers an Environment Variable
+  - Defaults Seen at the Edge of the Lawn
+  - Precedence, Inheritance, and Other Unreliable Witnesses
+  - Restarting Bly Without Waking the Children
+  live: false
+  published: 2026-07-14
+  pullquote: A configuration value is never more frightening than when everyone is
+    sure it came from somewhere else.
+  slug: the-turn-of-the-screwdriver
+  subtitle: Runtime configuration, feature switches, and other adjustable hauntings
+  teaser: The setting changed at midnight, and no one could say who had changed it.
+  title: The Turn of the Screwdriver
+  topic: Configuration Management
+- author: Erskine Childers
+  blurb: Childers reimagines the invasion-scare thriller as a sober handbook for containing
+    services before they discover the wider internet. From network namespaces and
+    egress allow-lists to service isolation, policy enforcement, and packet inspection,
+    this book maps the shifting channels between useful connectivity and avoidable
+    catastrophe.
+  contents:
+  - Charts, Channels, and Container Boundaries
+  - Egress Rules in Fog
+  - The Suspicious Packet off Norderney
+  - A Small Craft Advisory for Flat Networks
+  live: false
+  published: 2026-07-15
+  pullquote: Excellent on the precise moment when a harmless development container
+    begins behaving like a foreign power.
+  slug: the-riddle-of-the-sands-and-network-sandboxing
+  subtitle: A cautious expedition through isolation, egress, and suspicious traffic
+  teaser: Two yachtsmen, several subnets, and a growing conviction that unrestricted
+    egress is unwise.
+  title: The Riddle of the Sands and Network Sandboxing
+  topic: Network Security
+- author: John Buchan
+  blurb: Buchan's fugitive hero finds himself in an architecture where location proves
+    nothing and the old perimeter has vanished into the heather. This practical treatment
+    of zero trust covers strong identity, device posture, least privilege, continuous
+    authorisation, audit trails, and the operational patience required to distrust
+    politely at scale.
+  contents:
+  - The Man Who Trusted the Internal Network
+  - Credentials on the Flying Scotsman
+  - Least Privilege in the Highlands
+  - Thirty-Nine Steps and No Standing Access
+  live: false
+  published: 2026-07-16
+  pullquote: The perimeter is dead; fortunately, it left a rather useful audit log.
+  slug: the-thirty-nine-steps-to-zero-trust
+  subtitle: Identity, least privilege, and being pursued by one's own assumptions
+  teaser: A brisk chase across the moors in which every request must produce credentials.
+  title: The Thirty-Nine Steps to Zero Trust
+  topic: Zero Trust Security

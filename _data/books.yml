@@ -904,7 +904,7 @@
   - Quorums, Replicas, and Other Family Matters
   - The Grand Inquisitor's Guide to Leader Election
   - Confession Logs and Deterministic Recovery
-  live: false
+  live: true
   published: 2026-07-12
   pullquote: A bracing reminder that a cluster may be innocent, but no individual
     node should be trusted.

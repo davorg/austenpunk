@@ -925,7 +925,7 @@
   - Dead Letters and Other Social Embarrassments
   - The Proper Management of Retries
   - Back Pressure at Lord Steyne's Dinner
-  live: false
+  live: true
   published: 2026-07-13
   pullquote: No queue is truly genteel until it has learned to refuse callers.
   slug: vanity-fair-queues

@@ -943,7 +943,7 @@
   - Defaults Seen at the Edge of the Lawn
   - Precedence, Inheritance, and Other Unreliable Witnesses
   - Restarting Bly Without Waking the Children
-  live: false
+  live: true
   published: 2026-07-14
   pullquote: A configuration value is never more frightening than when everyone is
     sure it came from somewhere else.

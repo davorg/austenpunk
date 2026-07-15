@@ -963,7 +963,7 @@
   - Egress Rules in Fog
   - The Suspicious Packet off Norderney
   - A Small Craft Advisory for Flat Networks
-  live: false
+  live: true
   published: 2026-07-15
   pullquote: Excellent on the precise moment when a harmless development container
     begins behaving like a foreign power.

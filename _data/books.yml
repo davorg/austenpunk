@@ -992,3 +992,108 @@
   teaser: A brisk chase across the moors in which every request must produce credentials.
   title: The Thirty-Nine Steps to Zero Trust
   topic: Zero Trust Security
+- author: Lewis Carroll
+  blurb: Alice follows a stale response into a world where time-to-live is advisory,
+    distributed state is argumentative, and every performance improvement has a small
+    label reading 'DRINK ME'. This volume explains cache keys, eviction policies,
+    invalidation strategies, and the social perils of believing a dashboard that was
+    refreshed yesterday.
+  contents:
+  - Down the Rabbit Hole with a Warm Object Store
+  - The Mad Hatter's Least Recently Used Tea-Party
+  - Advice from a Caterpillar on Cache Keys
+  - The Queen of Hearts Demands Global Invalidation
+  live: false
+  published: 2026-07-17
+  pullquote: If a value changes in the forest and the edge cache does not hear it,
+    several users will.
+  slug: alices-adventures-in-cache-invalidation
+  subtitle: A curious journey through expiry, consistency, and other impossible things
+    before breakfast
+  teaser: A practical guide to the two hard problems in computer science, and the
+    rabbit-hole between them.
+  title: Alice's Adventures in Cache Invalidation
+  topic: Caching
+- author: Frances Hodgson Burnett
+  blurb: Behind every apparently healthy deployment lies a walled garden of configuration,
+    some of it labelled, some of it inherited, and some of it frankly medicinal. Burnett's
+    sober manual covers environment variables, configuration precedence, secret separation,
+    deployment promotion, and the quiet horror of discovering that staging has been
+    living on a different climate for years.
+  contents:
+  - The Key Beneath the Build Script
+  - What the Robin Knew About Defaults
+  - Separating Secrets from the Flowerbeds
+  - A Health Check in Full Bloom
+  live: false
+  published: 2026-07-18
+  pullquote: No system is truly orphaned while someone still remembers which variable
+    makes it start.
+  slug: the-secret-garden-of-environment-variables
+  subtitle: Cultivating configuration without letting credentials grow in the shrubbery
+  teaser: A restorative account of twelve-factor applications, neglected settings,
+    and the locked gate marked production.
+  title: The Secret Garden of Environment Variables
+  topic: Configuration Management
+- author: Kenneth Grahame
+  blurb: This measured treatment of real-time web architecture follows the river from
+    polling to server-sent events to WebSockets, pausing to consider connection lifecycles,
+    message ordering, reconnection, scaling, and the inadvisability of allowing Toad
+    to broadcast directly from production. It is a book for engineers who know that
+    immediacy is a feature, not an excuse to abandon protocols.
+  contents:
+  - Messing About with Long Polling
+  - Toad Hall Opens a Persistent Connection
+  - Badger Explains Backpressure
+  - Panic at the Load Balancer
+  live: false
+  published: 2026-07-19
+  pullquote: There is nothing, absolutely nothing, half so much worth doing as maintaining
+    a sensible heartbeat interval.
+  slug: the-wind-in-the-willows-and-websockets
+  subtitle: Persistent connections for riverbanks, dashboards, and excitable amphibians
+  teaser: Ratty, Mole, Badger, and Toad attempt bidirectional communication with varying
+    degrees of backpressure.
+  title: The Wind in the Willows and WebSockets
+  topic: Real-Time Web
+- author: Kate Chopin
+  blurb: The data lake was once promised freedom from the constrictions of the warehouse,
+    and like many freedoms it soon required partitioning, cataloguing, lineage, access
+    policy, and a naming convention nobody loved. Chopin examines ingestion, lakehouse
+    design, data quality, schema evolution, and the moment a team realises that 'raw'
+    is not a synonym for 'unaccountable'.
+  contents:
+  - A Swim Among Untyped Events
+  - The Grand Isle of Object Storage
+  - Schema Evolution at Dusk
+  - Lineage, or the Sound of the Sea
+  live: false
+  published: 2026-07-20
+  pullquote: She looked out across the parquet files and understood, with some alarm,
+    that they were all slightly different.
+  slug: the-awakening-of-the-data-lake
+  subtitle: On schema, sediment, and the uneasy consciousness of accumulated files
+  teaser: A lyrical but unsentimental study of what happens when raw data begins to
+    want governance.
+  title: The Awakening of the Data Lake
+  topic: Data Engineering
+- author: L. Frank Baum
+  blurb: Baum's accessible guide leads readers through OAuth 2.0 and OpenID Connect
+    without pretending that either was discovered by accident in a cornfield. It explains
+    authorisation codes, PKCE, refresh tokens, consent, resource servers, and the
+    repeated disappointment of confusing authentication with authorisation.
+  contents:
+  - No Place Like localhost
+  - The Scarecrow Requests the Correct Scope
+  - Emerald City as an Authorisation Server
+  - There and Back Again with a Refresh Token
+  live: false
+  published: 2026-07-21
+  pullquote: Pay no attention to the man behind the identity provider, unless he is
+    asking for the implicit flow.
+  slug: the-wonderful-wizard-of-oauth
+  subtitle: Grant types, consent screens, and the yellow brick road to delegated access
+  teaser: Dorothy seeks a token, the Scarecrow wants scopes, and the Tin Woodman rotates
+    his client secret.
+  title: The Wonderful Wizard of OAuth
+  topic: Authentication

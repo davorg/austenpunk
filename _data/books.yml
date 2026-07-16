@@ -984,7 +984,7 @@
   - Credentials on the Flying Scotsman
   - Least Privilege in the Highlands
   - Thirty-Nine Steps and No Standing Access
-  live: false
+  live: true
   published: 2026-07-16
   pullquote: The perimeter is dead; fortunately, it left a rather useful audit log.
   slug: the-thirty-nine-steps-to-zero-trust

@@ -11,5 +11,15 @@ jobs:
       - name: Get ElevenLabs Voice ID
         env:
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
-        run:
-          echo $ELEVENLABS_VOICE_ID
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: |
+          curl --fail --silent \
+            --header "xi-api-key: $ELEVENLABS_API_KEY" \
+            "https://api.elevenlabs.io/v1/voices/$ELEVENLABS_VOICE_ID" |
+            jq '{
+              name,
+              category,
+              labels,
+              description
+            }'
+

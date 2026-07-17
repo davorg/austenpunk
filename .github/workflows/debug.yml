@@ -16,10 +16,5 @@ jobs:
           curl --fail --silent \
             --header "xi-api-key: $ELEVENLABS_API_KEY" \
             "https://api.elevenlabs.io/v1/voices/$ELEVENLABS_VOICE_ID" |
-            jq '{
-              name,
-              category,
-              labels,
-              description
-            }'
+            jq -r '"Voice: \(.name)\nCategory: \(.category)\nDescription: \(.description // "none")"'
 

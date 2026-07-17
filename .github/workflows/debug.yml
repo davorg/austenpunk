@@ -1,0 +1,15 @@
+name: Debugging helper
+
+on:
+  workflow_dispatch:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get ElevenLabs Voice ID
+        env:
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        run:
+          echo $ELEVENLABS_VOICE_ID

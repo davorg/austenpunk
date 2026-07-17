@@ -2,7 +2,7 @@
 
 use v5.40;
 use utf8;
-use JSON::PP qw(decode_json encode_json);
+use JSON::PP qw(encode_json);
 use YAML::XS qw(LoadFile DumpFile);
 use HTTP::Tiny;
 use DateTime;
@@ -98,10 +98,14 @@ PROMPT
   die "OpenAI error: $res->{status} $res->{reason}\n$res->{content}\n"
     unless $res->{success};
 
-  my $data = decode_json( $res->{content} );
+  my $codec = JSON::PP->new;
+
+  # $res->{content} is raw UTF-8 bytes from HTTP, so utf8 mode is correct here.
+  my $data = $codec->utf8(1)->decode( $res->{content} );
   my $text = extract_output_text($data);
   my $json = extract_json_array($text);
-  my $new_books = decode_json($json);
+  # $json is already a decoded Perl character string, so disable utf8 mode.
+  my $new_books = $codec->utf8(0)->decode($json);
 
   die "OpenAI response was not an array\n" unless ref $new_books eq 'ARRAY';
   die "Expected $batch_size books, got " . @$new_books . "\n"

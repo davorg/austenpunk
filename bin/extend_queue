@@ -101,7 +101,7 @@ PROMPT
   my $data = decode_json( $res->{content} );
   my $text = extract_output_text($data);
   my $json = extract_json_array($text);
-  my $new_books = decode_json($json);
+  my $new_books = JSON::PP->new->decode($json);
 
   die "OpenAI response was not an array\n" unless ref $new_books eq 'ARRAY';
   die "Expected $batch_size books, got " . @$new_books . "\n"

@@ -8,13 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get ElevenLabs Voice ID
-        env:
-          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-        run: |
-          curl --fail --silent \
-            --header "xi-api-key: $ELEVENLABS_API_KEY" \
-            "https://api.elevenlabs.io/v1/voices/$ELEVENLABS_VOICE_ID" |
-            jq -r '"Voice: \(.name)\nCategory: \(.category)\nDescription: \(.description // "none")"'
+    - name: Get ElevenLabs voice name
+      env:
+        ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      run: |
+        set -o pipefail
+
+        curl --fail-with-body --silent --show-error \
+          --header "xi-api-key: $ELEVENLABS_API_KEY" \
+          "https://api.elevenlabs.io/v1/voices/$ELEVENLABS_VOICE_ID" |
+          jq -r '"Voice: \(.name)
+        Category: \(.category)
+        Description: \(.description // "none")"'
 

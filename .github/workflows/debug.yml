@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Get ElevenLabs voice ID
       env:
-        VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+        VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
       run: |
         echo "Part 1: ${VOICE_ID:0:10}"
         echo "Part 2: ${VOICE_ID:10:10}"

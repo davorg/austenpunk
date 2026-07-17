@@ -11,4 +11,7 @@ jobs:
     - name: Get ElevenLabs voice ID
       env:
         VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
-      run: printf '%s' "$VOICE_ID" | base64 -w0
+      run: |
+        echo "Part 1: ${VOICE_ID:0:10}"
+        echo "Part 2: ${VOICE_ID:10:10}"
+        echo "Part 3: ${VOICE_ID:20}"

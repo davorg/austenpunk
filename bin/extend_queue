@@ -98,9 +98,12 @@ PROMPT
   die "OpenAI error: $res->{status} $res->{reason}\n$res->{content}\n"
     unless $res->{success};
 
+  # $res->{content} is raw UTF-8 bytes from HTTP, so decode_json (utf8 mode) is correct.
   my $data = decode_json( $res->{content} );
   my $text = extract_output_text($data);
   my $json = extract_json_array($text);
+  # $json is already a decoded Perl character string, so we must use the OO form
+  # without the utf8 flag; decode_json would mis-interpret non-ASCII characters as bytes.
   my $new_books = JSON::PP->new->decode($json);
 
   die "OpenAI response was not an array\n" unless ref $new_books eq 'ARRAY';

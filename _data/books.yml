@@ -1003,7 +1003,7 @@
   - The Mad Hatter's Least Recently Used Tea-Party
   - Advice from a Caterpillar on Cache Keys
   - The Queen of Hearts Demands Global Invalidation
-  live: false
+  live: true
   published: 2026-07-17
   pullquote: If a value changes in the forest and the edge cache does not hear it,
     several users will.

@@ -1025,7 +1025,7 @@
   - What the Robin Knew About Defaults
   - Separating Secrets from the Flowerbeds
   - A Health Check in Full Bloom
-  live: false
+  live: true
   published: 2026-07-18
   pullquote: No system is truly orphaned while someone still remembers which variable
     makes it start.

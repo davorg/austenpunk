@@ -1046,7 +1046,7 @@
   - Toad Hall Opens a Persistent Connection
   - Badger Explains Backpressure
   - Panic at the Load Balancer
-  live: false
+  live: true
   published: 2026-07-19
   pullquote: There is nothing, absolutely nothing, half so much worth doing as maintaining
     a sensible heartbeat interval.

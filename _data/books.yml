@@ -1067,7 +1067,7 @@
   - The Grand Isle of Object Storage
   - Schema Evolution at Dusk
   - Lineage, or the Sound of the Sea
-  live: false
+  live: true
   published: 2026-07-20
   pullquote: She looked out across the parquet files and understood, with some alarm,
     that they were all slightly different.
@@ -1097,3 +1097,96 @@
     his client secret.
   title: The Wonderful Wizard of OAuth
   topic: Authentication
+- author: George Gissing
+  blurb: Gissing turns his severe attention to README files, runbooks, API references,
+    and the melancholy economics of keeping them current. This volume explains how
+    to write documentation that survives reorganisation, release pressure, and the
+    colleague who insists the code is self-explanatory.
+  contents:
+  - The Profession of Letters and Release Notes
+  - README as Social Contract
+  - Runbooks for the Respectably Desperate
+  - The Index, the Glossary, and the Single Source of Truth
+  live: false
+  published: 2026-07-22
+  pullquote: A bracing reminder that undocumented software is merely a Victorian serial
+    with missing instalments.
+  slug: new-grub-street-and-the-documentation-debt
+  subtitle: A literary guide to writing things down before the last maintainer resigns
+  teaser: For teams whose architecture is oral tradition with a search box.
+  title: New Grub Street and the Documentation Debt
+  topic: Technical Writing
+- author: E. Nesbit
+  blurb: 'Nesbit reimagines the build pipeline as a small rural railway: charming
+    when maintained, catastrophic when points are changed by hand. Learn to design
+    deterministic builds, cache responsibly, fail fast, and keep every artefact traceable
+    from platform to production.'
+  contents:
+  - Signals, Stages, and Sensible Defaults
+  - The 09:17 to Reproducibility
+  - When the Cache Is Full of Parcels
+  - Artefacts, Provenance, and the Station Master
+  live: false
+  published: 2026-07-23
+  pullquote: The first build manual to make a flaky test feel like a cow on the line.
+  slug: the-railway-children-and-the-build-pipeline
+  subtitle: Timetables, signals, and reproducible artefacts for civilised engineering
+  teaser: All aboard the express service from commit to deployable package.
+  title: The Railway Children and the Build Pipeline
+  topic: Build Engineering
+- author: Upton Sinclair
+  blurb: Sinclair tours the modern dependency ecosystem with the calm horror it deserves.
+    This book covers lockfiles, signed artefacts, vulnerability scanning, transitive
+    risk, and the practical business of knowing what, precisely, has been installed
+    in production.
+  contents:
+  - The Packing House of Transitive Dependencies
+  - Lockfiles and Other Modest Protections
+  - A Bill of Materials for the Appalled
+  - Signing the Artefact Before It Escapes
+  live: false
+  published: 2026-07-24
+  pullquote: After reading it, you will never again run an install script from a blog
+    post without a moment of class consciousness.
+  slug: the-jungle-and-software-supply-chain-security
+  subtitle: Unsparing observations on dependencies, provenance, and questionable packages
+  teaser: You aimed for convenience and discovered what was inside the sausage.
+  title: The Jungle and Software Supply Chain Security
+  topic: Software Supply Chain Security
+- author: Robert Tressell
+  blurb: Tressell applies his eye for labour, obligation, and cheerful exploitation
+    to open source software. From maintainer burnout to funding models, governance,
+    issue triage, and corporate dependency, this is a practical handbook for projects
+    that would like to remain alive.
+  contents:
+  - The Great Money Trick, Now with Dependencies
+  - Triage as a Form of Manual Labour
+  - Governance Without a Benevolent Ghost
+  - Funding the Library Everyone Imports
+  live: false
+  published: 2026-07-25
+  pullquote: Devastating on the subject of enterprises that discover community only
+    when the build fails.
+  slug: the-ragged-trousered-maintainers
+  subtitle: Open source sustainability in an age of unpaid critical infrastructure
+  teaser: A sober account of the people holding up the internet between lunch breaks.
+  title: The Ragged-Trousered Maintainers
+  topic: Open Source Maintenance
+- author: Émile Zola
+  blurb: Zola descends into the engine room of concurrent programming, where queues
+    deepen, locks harden, and starvation is not merely metaphorical. This guide explains
+    thread pools, race conditions, back pressure, and the disciplined management of
+    parallel work.
+  contents:
+  - The Mine Shaft Beneath the Event Loop
+  - Locks, Liveness, and Other Industrial Disputes
+  - Back Pressure in the Lower Galleries
+  - When the Thread Pool Organises
+  live: false
+  published: 2026-07-26
+  pullquote: Makes deadlock sound inevitable, historical, and faintly damp.
+  slug: germinal-and-worker-threads
+  subtitle: Concurrency, contention, and the uprising of background tasks
+  teaser: Beneath the user interface, the workers are no longer waiting politely.
+  title: Germinal and Worker Threads
+  topic: Concurrency

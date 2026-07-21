@@ -1087,7 +1087,7 @@
   - The Scarecrow Requests the Correct Scope
   - Emerald City as an Authorisation Server
   - There and Back Again with a Refresh Token
-  live: false
+  live: true
   published: 2026-07-21
   pullquote: Pay no attention to the man behind the identity provider, unless he is
     asking for the implicit flow.

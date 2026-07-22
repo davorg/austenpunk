@@ -1107,7 +1107,7 @@
   - README as Social Contract
   - Runbooks for the Respectably Desperate
   - The Index, the Glossary, and the Single Source of Truth
-  live: false
+  live: true
   published: 2026-07-22
   pullquote: A bracing reminder that undocumented software is merely a Victorian serial
     with missing instalments.

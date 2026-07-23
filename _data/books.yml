@@ -1126,7 +1126,7 @@
   - The 09:17 to Reproducibility
   - When the Cache Is Full of Parcels
   - Artefacts, Provenance, and the Station Master
-  live: false
+  live: true
   published: 2026-07-23
   pullquote: The first build manual to make a flaky test feel like a cow on the line.
   slug: the-railway-children-and-the-build-pipeline

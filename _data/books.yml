@@ -1144,7 +1144,7 @@
   - Lockfiles and Other Modest Protections
   - A Bill of Materials for the Appalled
   - Signing the Artefact Before It Escapes
-  live: false
+  live: true
   published: 2026-07-24
   pullquote: After reading it, you will never again run an install script from a blog
     post without a moment of class consciousness.

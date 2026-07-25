@@ -1163,7 +1163,7 @@
   - Triage as a Form of Manual Labour
   - Governance Without a Benevolent Ghost
   - Funding the Library Everyone Imports
-  live: false
+  live: true
   published: 2026-07-25
   pullquote: Devastating on the subject of enterprises that discover community only
     when the build fails.
@@ -1190,3 +1190,99 @@
   teaser: Beneath the user interface, the workers are no longer waiting politely.
   title: Germinal and Worker Threads
   topic: Concurrency
+- author: Rudyard Kipling
+  blurb: Kim learns that a cluster is less a machine than a nervous arrangement of
+    rumours, labels, taints, and tolerations. This practical guide follows pods across
+    contested territory, explaining scheduling constraints, resource requests, autoscaling,
+    and the delicate art of not mistaking a healthy node for a loyal one.
+  contents:
+  - The Lama, the Label, and the Node Affinity
+  - Taints, Tolerations, and Other Frontier Customs
+  - Requests, Limits, and the Arithmetic of Hunger
+  - Autoscaling Without Starting a War
+  live: false
+  published: 2026-07-27
+  pullquote: No pod is an orphan if its selector has been properly brought up.
+  slug: kim-and-kubernetes
+  subtitle: A Survey of Nodes, Namespaces, and the Great Game of Scheduling
+  teaser: An imperial education in placing workloads where they may do the least harm.
+  title: Kim and Kubernetes
+  topic: Cluster Scheduling
+- author: Gaston Leroux
+  blurb: Beneath the public façade of the application lurks a gateway with strong
+    opinions about routing, quotas, headers, and identity. This volume offers a sober
+    tour of ingress patterns, request transformation, circuit breaking, and the many
+    tragedies caused by exposing an internal service because it had a pleasant voice.
+  contents:
+  - Box Five and the Public Endpoint
+  - The Masked Header of Identity
+  - Ariettas in Authentication and Authorisation
+  - When the Circuit Breaker Drops the Chandelier
+  live: false
+  published: 2026-07-28
+  pullquote: The chandelier fell shortly after someone disabled rate limiting for
+    a partner integration.
+  slug: the-phantom-of-the-api-gateway
+  subtitle: Routing, Rate Limiting, and the Opera of Ingress
+  teaser: A masked intermediary explains why every request sounds better after authentication.
+  title: The Phantom of the API Gateway
+  topic: API Gateways
+- author: George Meredith
+  blurb: Sir Willoughby considers every warning an affront until production demonstrates
+    the social value of consistent formatting. This guide covers linting, type checking,
+    custom rules, pre-commit hooks, and the tact required to tell a senior engineer
+    that their preferred idiom is indistinguishable from a defect.
+  contents:
+  - A Proposal Rejected by the Parser
+  - Rules, Exceptions, and Other Drawing-Room Compromises
+  - Pre-Commit Hooks for the Self-Regarding
+  - The Final Warning Before Merge
+  live: false
+  published: 2026-07-29
+  pullquote: A linter is merely society, automated and slightly less forgiving.
+  slug: the-egoist-and-the-linter
+  subtitle: Static Analysis for Developers of Strong Personal Style
+  teaser: A comedy of manners in which the protagonist is repeatedly corrected before
+    runtime.
+  title: The Egoist and the Linter
+  topic: Static Analysis
+- author: Willa Cather
+  blurb: The first commit is a claim staked against uncertainty. This book examines
+    how new systems should choose their boundaries, data models, deployment paths,
+    and observability before custom and weather harden every decision into landscape.
+    It is particularly useful for engineers who believe a greenfield project contains
+    no legacy, only legacy in seed form.
+  contents:
+  - Breaking the Ground with a Repository
+  - Bounded Contexts on the Open Plain
+  - The First Migration and Its Consequences
+  - Harvesting Feedback Before Winter
+  live: false
+  published: 2026-07-30
+  pullquote: The prairie was blank, except for the ADRs no one had yet written.
+  slug: o-pioneers-and-greenfield-projects
+  subtitle: Homesteading an Architecture Before the Requirements Arrive
+  teaser: A frontier manual for teams blessed with empty repositories and dangerous
+    optimism.
+  title: O Pioneers! and Greenfield Projects
+  topic: Greenfield Development
+- author: Anthony Hope
+  blurb: When the true environment is unavailable, a convincing double must take its
+    place without inheriting the crown. This guide explains sandbox design, anonymised
+    data, service virtualisation, access boundaries, and the ceremonial confusion
+    that follows when staging is treated as a spare kingdom.
+  contents:
+  - The Coronation of Staging
+  - Doubles, Mocks, and Diplomatic Incidents
+  - Test Data Without a Line of Succession
+  - Restoring the King After the Demo
+  live: false
+  published: 2026-07-31
+  pullquote: The resemblance to production was excellent, which is precisely why it
+    had to be locked down.
+  slug: the-prisoner-of-zenda-and-sandbox-environments
+  subtitle: Safe Impersonation, Test Data, and the Politics of Staging
+  teaser: A constitutional romance of production-like settings that must never become
+    production.
+  title: The Prisoner of Zenda and Sandbox Environments
+  topic: Environment Management

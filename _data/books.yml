@@ -1182,7 +1182,7 @@
   - Locks, Liveness, and Other Industrial Disputes
   - Back Pressure in the Lower Galleries
   - When the Thread Pool Organises
-  live: false
+  live: true
   published: 2026-07-26
   pullquote: Makes deadlock sound inevitable, historical, and faintly damp.
   slug: germinal-and-worker-threads

@@ -1200,7 +1200,7 @@
   - Taints, Tolerations, and Other Frontier Customs
   - Requests, Limits, and the Arithmetic of Hunger
   - Autoscaling Without Starting a War
-  live: true
+  live: false
   published: 2026-07-27
   pullquote: No pod is an orphan if its selector has been properly brought up.
   slug: kim-and-kubernetes

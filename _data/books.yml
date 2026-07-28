@@ -1218,7 +1218,7 @@
   - The Masked Header of Identity
   - Ariettas in Authentication and Authorisation
   - When the Circuit Breaker Drops the Chandelier
-  live: false
+  live: true
   published: 2026-07-28
   pullquote: The chandelier fell shortly after someone disabled rate limiting for
     a partner integration.

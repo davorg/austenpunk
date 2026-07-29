@@ -1237,7 +1237,7 @@
   - Rules, Exceptions, and Other Drawing-Room Compromises
   - Pre-Commit Hooks for the Self-Regarding
   - The Final Warning Before Merge
-  live: false
+  live: true
   published: 2026-07-29
   pullquote: A linter is merely society, automated and slightly less forgiving.
   slug: the-egoist-and-the-linter

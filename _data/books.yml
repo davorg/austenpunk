@@ -1257,7 +1257,7 @@
   - Bounded Contexts on the Open Plain
   - The First Migration and Its Consequences
   - Harvesting Feedback Before Winter
-  live: false
+  live: true
   published: 2026-07-30
   pullquote: The prairie was blank, except for the ADRs no one had yet written.
   slug: o-pioneers-and-greenfield-projects
@@ -1286,3 +1286,99 @@
     production.
   title: The Prisoner of Zenda and Sandbox Environments
   topic: Environment Management
+- author: Mary Elizabeth Braddon
+  blurb: Lady Audley recommends regular key rotation, short cryptoperiods, and the
+    careful retirement of credentials that have seen too much. This volume explains
+    vaults, envelope encryption, audit trails, and why a secret written in a deployment
+    log is no longer a secret.
+  contents:
+  - The Locked Cabinet and the Key Derivation Function
+  - Rotating Without Ruining the Luncheon
+  - Audit Trails in the West Wing
+  - When a Secret Has Been Seen by the Help
+  live: false
+  published: 2026-08-01
+  pullquote: No mystery is improved by finding the production token in plain text.
+  slug: lady-audleys-secret-rotation
+  subtitle: Key management for households with too many locked rooms
+  teaser: A polite guide to changing secrets before they become evidence.
+  title: Lady Audley's Secret Rotation
+  topic: Key Management
+- author: Stephen Crane
+  blurb: A campaign manual for undoing bad releases without theatrical despair. Crane
+    covers immutable artefacts, backwards-compatible database changes, traffic shifting,
+    and the moral difference between a rollback and a rout.
+  contents:
+  - Skirmishes at the Feature Flag
+  - The Drums of the Error Budget
+  - Database Retreats and Other Orderly Movements
+  - After-Action Reports Without Heroics
+  live: false
+  published: 2026-08-02
+  pullquote: The bravest engineer is often the one who presses revert while everyone
+    else is explaining why it is probably fine.
+  slug: the-red-badge-of-courageous-rollbacks
+  subtitle: Retreating from production with honour and telemetry
+  teaser: For teams who discover bravery after the error budget has already discovered
+    them.
+  title: The Red Badge of Courageous Rollbacks
+  topic: Rollback Strategy
+- author: Theodore Dreiser
+  blurb: Carrie leaves the staging environment for a measured life in production,
+    observed by metrics, guarded by automated checks, and judged by user cohorts.
+    This book explains canaries, gradual rollouts, health gates, and the quiet tragedy
+    of ignoring baseline latency.
+  contents:
+  - Leaving Staging for the Big City
+  - Cohorts, Classes, and Control Groups
+  - Health Checks at the Department Store
+  - Promotion, Rollback, and Reputation
+  live: false
+  published: 2026-08-03
+  pullquote: One should never expose the whole audience to a new build merely because
+    it looked charming in rehearsal.
+  slug: sister-carrie-and-canary-releases
+  subtitle: Progressive delivery for ambitious services in uncertain cities
+  teaser: A restrained account of sending one small instance ahead to see what society
+    makes of it.
+  title: Sister Carrie and Canary Releases
+  topic: Progressive Delivery
+- author: Charlotte Perkins Gilman
+  blurb: Gilman examines the domestic horror of global stylesheets and the slow unravelling
+    caused by accidental inheritance. Readers will learn containment, cascade layers,
+    component boundaries, and why naming conventions are preferable to nervous convalescence.
+  contents:
+  - A Room Entirely Papered in Global Rules
+  - Specificity and Other Nervous Conditions
+  - Containment, Layers, and Locked Doors
+  - Escaping the Cascade Without Escaping the House
+  live: false
+  published: 2026-08-04
+  pullquote: There are selectors in the walls, and they are all more specific than
+    yours.
+  slug: the-yellow-wallpaper-and-css-containment
+  subtitle: Preventing decorative concerns from escaping their box
+  teaser: A frontend treatise on isolation, specificity, and the patterns that begin
+    to move when left unscoped.
+  title: The Yellow Wallpaper and CSS Containment
+  topic: CSS Architecture
+- author: John Galsworthy
+  blurb: The Forsytes acquire tables, indexes, and nullable fields with the tenacity
+    of property owners. This guide covers expand-and-contract migrations, online backfills,
+    compatibility windows, and the etiquette of deleting a column after everyone has
+    grown fond of it.
+  contents:
+  - Entailed Tables and Family Constraints
+  - The Expand-and-Contract Understanding
+  - Backfilling Without Disturbing the Tenants
+  - On Dropping Columns After a Suitable Mourning Period
+  live: false
+  published: 2026-08-05
+  pullquote: A schema, like an estate, is never truly owned by the person currently
+    altering it.
+  slug: the-forsyte-saga-of-schema-migrations
+  subtitle: Database change for families who never throw anything away
+  teaser: A multi-generational study of columns added in haste and constraints inherited
+    in silence.
+  title: The Forsyte Saga of Schema Migrations
+  topic: Database Migrations

@@ -1,8 +1,8 @@
 name: Build and deploy Jekyll site
 
 on:
-  push:
-    branches: [main]
+#  push:
+#    branches: [main]
   workflow_dispatch:
 
 permissions:

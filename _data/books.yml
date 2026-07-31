@@ -1276,7 +1276,7 @@
   - Doubles, Mocks, and Diplomatic Incidents
   - Test Data Without a Line of Succession
   - Restoring the King After the Demo
-  live: false
+  live: true
   published: 2026-07-31
   pullquote: The resemblance to production was excellent, which is precisely why it
     had to be locked down.
